@@ -156,7 +156,7 @@ section{padding:90px 0;position:relative}
 .cf-wrap{position:relative;margin-top:20px}
 .cf{display:flex;gap:26px;overflow-x:auto;scroll-snap-type:x mandatory;padding:34px calc(50% - min(165px,39vw)) 46px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .cf::-webkit-scrollbar{display:none}
-.nc{flex:0 0 min(330px,78vw);scroll-snap-align:center;border:2px solid var(--bd);border-radius:26px;overflow:hidden;box-shadow:var(--sh2);transition:transform .35s,opacity .35s;background:var(--card);display:flex;flex-direction:column}
+.nc{flex:0 0 min(330px,78vw);scroll-snap-align:center;border:2px solid var(--bd);border-radius:26px;overflow:hidden;box-shadow:var(--sh2);background:var(--card);display:flex;flex-direction:column;will-change:transform;backface-visibility:hidden;-webkit-backface-visibility:hidden}
 .nc .art{height:190px;position:relative;border-bottom:2px solid var(--bd);overflow:hidden}
 .nc .bd{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
 .nc .badge{align-self:flex-start;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:8px;background:var(--ink);color:var(--y)}
@@ -1406,7 +1406,7 @@ function jump(to){ // invisible teleport to the same card in the middle set
   cf.scrollLeft+= (cards[to].offsetLeft-cards[cur].offsetLeft); cur=to;
   requestAnimationFrame(function(){ cf.style.scrollSnapType=old; cf.style.scrollBehavior=''; });
 }
-function recenter(){ if(cur<N) jump(cur+N); else if(cur>=2*N) jump(cur-N); }
+function recenter(){ if(cur<N){ if(tgt!==null) tgt+=N; jump(cur+N);} else if(cur>=2*N){ if(tgt!==null) tgt-=N; jump(cur-N);} }
 function paint(){ var mid=cf.scrollLeft+cf.clientWidth/2, best=0, bd=1e9;
   cards.forEach(function(c,i){ var d=(c.offsetLeft+c.offsetWidth/2-mid)/(c.offsetWidth+26), a=Math.min(Math.abs(d),2);
     if(Math.abs(d)<bd){bd=Math.abs(d);best=i;}
@@ -1416,18 +1416,19 @@ function paint(){ var mid=cf.scrollLeft+cf.clientWidth/2, best=0, bd=1e9;
   if(best!==cur && paused && typeof SFX!=='undefined') SFX.play('tick');
   cur=best; var r=((cur%N)+N)%N; [].forEach.call(dots.children,function(b,i){ b.classList.toggle('on',i===r); }); }
 var raf=0, settle=0;
-cf.addEventListener('scroll',function(){ if(!raf) raf=requestAnimationFrame(function(){raf=0;paint();}); clearTimeout(settle); settle=setTimeout(recenter,140); },{passive:true});
+cf.addEventListener('scroll',function(){ if(!raf) raf=requestAnimationFrame(function(){raf=0;paint();}); clearTimeout(settle); settle=setTimeout(recenter,90); },{passive:true});
 if('onscrollend' in window) cf.addEventListener('scrollend',function(){ clearTimeout(settle); recenter(); });
 window.addEventListener('resize',function(){ go(cur,true); paint(); }); window.addEventListener('orientationchange',function(){ setTimeout(function(){ go(cur,true); paint(); },300); });
-function hold(){ paused=true; clearTimeout(pT); pT=setTimeout(function(){paused=false;},7000); }
+function hold(){ paused=true; clearTimeout(pT); pT=setTimeout(function(){paused=false;},4000); }
 ['pointerdown','touchstart','wheel'].forEach(function(ev){ cf.addEventListener(ev,hold,{passive:true}); });
 cf.addEventListener('mouseenter',function(){paused=true;}); cf.addEventListener('mouseleave',function(){paused=false;});
-document.getElementById('cfPrev').onclick=function(){ go(cur-1); hold(); };
-document.getElementById('cfNext').onclick=function(){ go(cur+1); hold(); };
+var tgt=null; function step(d){ recenter(); var from=(tgt!==null && Math.abs(cf.scrollLeft-left(cards[tgt]))>4)?tgt:cur; tgt=Math.max(1,Math.min(cards.length-2,from+d)); go(tgt); hold(); }
+document.getElementById('cfPrev').onclick=function(){ step(-1); };
+document.getElementById('cfNext').onclick=function(){ step(1); };
 function startPos(){ cur=N+1; cf.scrollLeft=left(cards[cur]); paint(); }
 setTimeout(startPos,80); window.addEventListener('load',function(){ setTimeout(function(){ go(cur,true); paint(); },50); });
 paint();
-if(!reduce) setInterval(function(){ if(!paused && !document.hidden) go(cur+1); },3500);
+if(!reduce) setInterval(function(){ if(!paused && !document.hidden) go(cur+1); },3000);
 
 /* ---------- 10-second check ---------- */
 var R={
