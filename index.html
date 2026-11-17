@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NEET Guidance by Meenakshi Ma'am | Personal NEET mentorship</title>
+<meta name="description" content="1:1 NEET guidance calls with Meenakshi Ma'am till exam day, plus Photo Notes, Mind Maps, the NCERT + PYQ question bank and line-by-line worksheets. ₹9,000 for the full year.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --y:#F5C518; --y-d:#C99A00; --y-l:#FFE58A; --y-s:#FFF7D6;
+  --ink:#111111; --ink-2:#333; --mute:#666; --line:#E7E3D8;
+  --bg:#FBFAF6; --white:#fff; --green:#25D366; --red:#EF4444;
+  --sh:4px 4px 0 var(--ink); --sh2:6px 6px 0 var(--ink);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.55;overflow-x:hidden}
+h1,h2,h3,h4{font-family:"Bricolage Grotesque",Inter,sans-serif;font-weight:800;letter-spacing:-.025em;line-height:1.04}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer}
+img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+section{padding:90px 0;position:relative}
+.center{text-align:center}
+.eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--y-s);color:var(--ink);border:1.5px solid var(--ink);padding:6px 14px;border-radius:99px}
+.eyebrow.dk{background:var(--ink);color:var(--y)}
+.h2{font-size:clamp(34px,5.2vw,58px);margin:16px 0 14px}
+.sub{color:var(--mute);font-size:18px;max-width:640px}
+.center .sub{margin:0 auto}
+.mark{position:relative;white-space:nowrap;z-index:0}
+.mark:after{content:"";position:absolute;left:-4px;right:-4px;bottom:.06em;height:.36em;background:var(--y);z-index:-1;border-radius:4px;transform:skew(-6deg)}
+.on-dark .mark:after{background:var(--y);opacity:.35}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:700;font-size:16px;padding:15px 24px;border-radius:16px;border:2px solid var(--ink);background:#fff;color:var(--ink);box-shadow:0 5px 0 var(--ink);transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 7px 0 var(--ink)}
+.btn:active{transform:translateY(4px);box-shadow:0 1px 0 var(--ink)}
+.btn-y{background:var(--y)}
+.btn-k{background:var(--ink);color:#fff;box-shadow:0 5px 0 var(--y-d)}
+.btn-k:hover{box-shadow:0 7px 0 var(--y-d)}
+.btn-g{background:var(--green);color:var(--ink)}
+.btn .arr{transition:transform .2s}.btn:hover .arr{transform:translateX(4px)}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:80;background:rgba(255,255,255,.9);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1.5px solid var(--line)}
+.nav .wrap{height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-family:"Bricolage Grotesque";font-size:19px;line-height:1}
+.brand small{display:block;font-family:Inter;font-weight:500;font-size:11.5px;color:var(--mute);margin-top:3px}
+.brand .bm{width:40px;height:40px;border-radius:12px;background:var(--y);border:2px solid var(--ink);display:grid;place-items:center;box-shadow:2px 2px 0 var(--ink);font-size:20px}
+.menu{display:flex;align-items:center;gap:26px;font-weight:600;font-size:15px}
+.menu a:not(.btn):hover{color:var(--y-d)}
+.menu .btn{padding:10px 18px;font-size:14px;border-radius:12px;box-shadow:0 4px 0 var(--ink)}
+@media(max-width:900px){.menu a:not(.btn){display:none}}
+
+/* HERO */
+.hero{background:radial-gradient(560px 380px at 88% 18%,rgba(245,197,24,.22),transparent 70%),radial-gradient(500px 360px at 6% 92%,rgba(245,197,24,.14),transparent 70%),var(--bg);padding:64px 0 70px;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(17,17,17,.09) 1px,transparent 1px);background-size:26px 26px;-webkit-mask-image:linear-gradient(180deg,#000 40%,transparent);mask-image:linear-gradient(180deg,#000 40%,transparent);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:36px;align-items:center;position:relative}
+.pill{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1.5px solid var(--line);padding:6px 16px 6px 6px;border-radius:99px;font-size:14px;font-weight:600;box-shadow:0 8px 22px -14px rgba(0,0,0,.35)}
+.pill b{background:var(--y);border-radius:99px;padding:5px 10px;font-size:12px;letter-spacing:.04em;border:1.5px solid var(--ink)}
+.hero h1{font-size:clamp(42px,5.7vw,78px);margin:22px 0 22px}
+.hero h1 .ul{position:relative;display:inline-block;white-space:nowrap}
+.hero h1 .ul svg{position:absolute;left:-2%;bottom:-.16em;width:104%;height:.38em;overflow:visible}
+.hero h1 .ul path{stroke:var(--y);stroke-width:9;fill:none;stroke-linecap:round;stroke-dasharray:440;stroke-dashoffset:440;animation:draw 1.1s .5s forwards ease-out}
+@keyframes draw{to{stroke-dashoffset:0}}
+.hero h1 .blk{display:inline-block;background:var(--ink);color:var(--y);padding:0 .18em;border-radius:.18em;transform:rotate(-2deg)}
+.lead{font-size:19px;color:var(--ink-2);max-width:540px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin:30px 0 30px}
+.proof{display:flex;align-items:center;gap:14px}
+.proof .av{width:52px;height:52px;border-radius:50%;border:2.5px solid var(--ink);background:var(--y);overflow:hidden;flex:none}
+.proof .av img{width:100%;height:100%;object-fit:cover;object-position:50% 18%}
+.proof b{display:block;font-size:15px}
+.proof small{font-size:14px;color:var(--mute)}
+
+/* DNA stage */
+.stage{position:relative;height:520px;border-radius:30px}
+.stage .sparkle{position:absolute;color:var(--y-d);font-size:16px;animation:tw 2.6s ease-in-out infinite;pointer-events:none}
+.stage .sparkle:nth-child(2n){color:var(--ink);font-size:12px}
+@keyframes tw{0%,100%{transform:scale(.6);opacity:.3}50%{transform:scale(1.2);opacity:.9}}
+.helix-box{position:absolute;left:4%;right:4%;top:50%;height:180px;margin-top:-60px;transform:rotate(-12deg)}
+.helix{position:absolute;inset:0}
+.rung{position:absolute;top:0;bottom:0;width:0}
+.rung .bar{position:absolute;left:-2px;width:4px;border-radius:4px;background:#d6d1c4;transition:background .3s}
+.rung .n{position:absolute;left:-13px;width:26px;height:26px;border-radius:50%;border:2.5px solid var(--ink);background:#EDEAE1;transition:background .3s}
+.rung.on .bar{background:var(--ink)}
+.rung.on .a{background:var(--y)}
+.rung.on .b{background:var(--ink)}
+.rung .b{border-color:var(--ink)}
+.stage.pro .rung.on .a{box-shadow:0 0 18px 4px rgba(245,197,24,.7)}
+.glow{position:absolute;left:10%;right:10%;top:30%;bottom:22%;border-radius:50%;background:radial-gradient(closest-side,rgba(245,197,24,.55),transparent);opacity:0;transition:opacity .5s;pointer-events:none}
+.stage.pro .glow{opacity:1;animation:pulse 1s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(1.08)}}
+.status{position:absolute;left:50%;top:7%;transform:translateX(-50%);z-index:5;text-align:center;background:#fff;border:2px solid var(--ink);border-radius:16px;padding:10px 16px 10px;box-shadow:3px 3px 0 var(--ink);min-width:250px;transition:background .3s,color .3s}
+.status .t{font-weight:800;font-size:16px;position:relative;display:inline-block;white-space:nowrap}
+.status .t:after{content:"";position:absolute;left:-3px;right:-3px;top:52%;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.stage.strike .status .t:after{transform:scaleX(1)}
+.status .meter{display:flex;align-items:center;gap:10px;margin-top:8px;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--mute)}
+.status .track{flex:1;height:8px;border-radius:9px;background:#EEE;border:1.5px solid var(--ink);overflow:hidden}
+.status .fill{height:100%;width:0;background:var(--y);transition:width .25s}
+.stage.pro .status{background:var(--ink);color:#fff}
+.stage.pro .status .meter{color:var(--y)}
+.chip{position:absolute;z-index:4;white-space:nowrap;font-size:13px;font-weight:700;background:#fff;border:2px solid var(--ink);border-radius:999px;padding:7px 12px;box-shadow:2px 2px 0 var(--ink);opacity:0;transform:scale(.4);pointer-events:none}
+.chip.k{background:var(--ink);color:var(--y)}
+.chip.yy{background:var(--y)}
+.fx{position:absolute;border-radius:50%;pointer-events:none;z-index:6}
+.postit{position:absolute;right:-6px;bottom:-14px;background:var(--y);padding:14px 16px;width:200px;transform:rotate(4deg);box-shadow:0 12px 24px -12px rgba(0,0,0,.4);font-family:Caveat,cursive;font-size:22px;line-height:1.12;z-index:6}
+.postit:before{content:"";position:absolute;top:-10px;left:50%;width:60px;height:20px;background:rgba(255,255,255,.65);transform:translateX(-50%) rotate(-3deg)}
+@media(max-width:940px){
+  .hero-grid{grid-template-columns:1fr}
+  .stage{height:420px;margin-top:6px}
+}
+@media(max-width:520px){
+  .stage{height:380px}
+  .helix-box{height:150px;margin-top:-40px}
+  .rung .n{width:20px;height:20px;left:-10px}
+  .chip{font-size:11.5px;padding:6px 10px}
+  .status{min-width:220px}.status .t{font-size:14px}
+  .postit{width:160px;font-size:19px;right:0;bottom:-20px}
+}
+
+/* RIBBONS */
+.ribbons{position:relative;height:150px;overflow:hidden;margin-top:-40px;z-index:3}
+.rib{position:absolute;left:-5%;width:110%;padding:15px 0;border-block:2px solid var(--ink);overflow:hidden}
+.rib.r1{top:30px;background:var(--ink);color:#fff;transform:rotate(-2.4deg);z-index:2}
+.rib.r2{top:60px;background:var(--y);transform:rotate(1.6deg)}
+.rib .tr{display:flex;gap:30px;width:max-content;animation:marq 34s linear infinite;font-family:"Bricolage Grotesque";font-weight:800;font-size:22px;align-items:center;white-space:nowrap}
+.rib.r2 .tr{animation-direction:reverse;animation-duration:40s;font-size:19px}
+.rib .st{color:var(--y)}
+.rib.r2 .st{color:var(--ink)}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px}
+.stat{border:2px solid var(--ink);border-radius:22px;padding:24px 22px;box-shadow:var(--sh);transition:transform .2s}
+.stat:hover{transform:translateY(-4px) rotate(-1deg)}
+.stat b{font-family:"Bricolage Grotesque";font-size:44px;line-height:1;display:block;margin-bottom:10px}
+.stat span{font-weight:600;font-size:16px;display:block}
+.stat small{display:block;color:var(--mute);font-size:13px;margin-top:6px}
+.stat.s-y{background:var(--y)}
+.stat.s-k{background:var(--ink);color:#fff}.stat.s-k b{color:var(--y)}.stat.s-k small{color:#bbb}
+.stat.s-w{background:#fff}
+.stat.s-l{background:var(--y-s)}
+@media(max-width:860px){.stats{grid-template-columns:1fr 1fr}.stat b{font-size:36px}}
+
+/* NOTES coverflow */
+.notes{background:#fff}
+.notes-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.cf-wrap{position:relative;margin-top:20px}
+.cf{display:flex;gap:26px;overflow-x:auto;scroll-snap-type:x mandatory;padding:34px calc(50% - min(165px,39vw)) 46px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.cf::-webkit-scrollbar{display:none}
+.nc{flex:0 0 min(330px,78vw);scroll-snap-align:center;border:2px solid var(--ink);border-radius:26px;overflow:hidden;box-shadow:var(--sh2);transition:transform .35s,opacity .35s;background:#fff;display:flex;flex-direction:column}
+.nc .art{height:190px;position:relative;border-bottom:2px solid var(--ink);overflow:hidden}
+.nc .bd{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
+.nc .badge{align-self:flex-start;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:8px;background:var(--ink);color:var(--y)}
+.nc h3{font-size:25px}
+.nc .fxs{font-size:14px;color:var(--ink-2);background:var(--y-s);border:1.5px dashed var(--ink);border-radius:12px;padding:10px 12px}
+.nc .fxs b{font-weight:700}
+.nc ul{list-style:none;display:grid;gap:7px;font-size:14.5px}
+.nc li{display:flex;gap:8px}.nc li:before{content:"✓";font-weight:800;color:var(--y-d)}
+.nc.k{background:var(--ink);color:#fff}.nc.k .badge{background:var(--y);color:var(--ink)}
+.nc.k .fxs{background:#1f1f1f;color:#eee;border-color:var(--y)}
+.nc.k li:before{color:var(--y)}
+.nc.y{background:var(--y)}.nc.y .fxs{background:#fff}.nc.y li:before{color:var(--ink)}
+.cf-btn{position:absolute;top:44%;width:52px;height:52px;border-radius:50%;border:2px solid var(--ink);background:#fff;box-shadow:0 4px 0 var(--ink);font-size:20px;font-weight:800;z-index:3;display:grid;place-items:center}
+.cf-btn:active{transform:translateY(3px);box-shadow:0 1px 0 var(--ink)}
+.cf-prev{left:8px}.cf-next{right:8px}
+@media(max-width:600px){.cf-btn{display:none}}
+.dots{display:flex;justify-content:center;gap:8px}
+.dots button{width:10px;height:10px;border-radius:99px;border:1.5px solid var(--ink);background:#fff;transition:width .25s,background .25s}
+.dots button.on{width:28px;background:var(--y)}
+/* mini illustrations */
+.art.photo{background:var(--y-s)}
+.paper{position:absolute;left:50%;top:22px;width:200px;height:200px;margin-left:-100px;background:#fff;border:2px solid var(--ink);border-radius:12px;transform:rotate(-4deg);padding:14px;box-shadow:4px 4px 0 var(--ink)}
+.paper .ln{height:7px;border-radius:5px;background:#e6e1d3;margin:7px 0}
+.paper .ln.s{width:60%}
+.paper svg{float:right;margin:0 0 4px 8px}
+.art.mm{background:#191919}
+.art.bank{background:#fff}
+.qchip{position:absolute;font-size:12px;font-weight:800;padding:7px 11px;border:2px solid var(--ink);border-radius:10px;background:var(--y);box-shadow:2px 2px 0 var(--ink);white-space:nowrap}
+.qchip.w{background:#fff}.qchip.k{background:var(--ink);color:var(--y)}
+.art.ws{background:#1b1b1b;display:grid;place-items:center}
+.wsheet{width:230px;background:#fff;color:var(--ink);border:2px solid var(--y);border-radius:12px;padding:14px;font-size:13px;line-height:1.9;transform:rotate(3deg)}
+.wsheet u{display:inline-block;min-width:60px;border-bottom:2px dashed var(--ink);text-decoration:none}
+.wsheet .sc{display:inline-block;background:var(--y);border:1.5px solid var(--ink);border-radius:8px;padding:0 8px;font-weight:800;font-size:12px;margin-top:4px}
+.art.plan{background:var(--y)}
+.chk{position:absolute;left:50%;top:22px;margin-left:-110px;width:220px;background:#fff;border:2px solid var(--ink);border-radius:14px;padding:12px 14px;box-shadow:4px 4px 0 var(--ink);font-size:13.5px;font-weight:600;display:grid;gap:8px}
+.chk span{display:flex;gap:8px;align-items:center}
+.chk i{width:18px;height:18px;border-radius:6px;border:2px solid var(--ink);display:grid;place-items:center;font-style:normal;font-size:11px;background:var(--y)}
+.chk i.e{background:#fff}
+.art.call{background:var(--y-s);display:grid;place-items:center}
+.phone-call{width:190px;background:var(--ink);color:#fff;border-radius:22px;padding:16px;text-align:center;border:2px solid var(--ink);box-shadow:4px 4px 0 var(--y-d)}
+.phone-call .ph{width:56px;height:56px;border-radius:50%;margin:0 auto 8px;overflow:hidden;border:2px solid var(--y);background:var(--y)}
+.phone-call .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 15%}
+.phone-call small{display:block;color:var(--y);font-size:12px;animation:blink 1.4s infinite}
+@keyframes blink{50%{opacity:.35}}
+.phone-call .btns{display:flex;justify-content:center;gap:18px;margin-top:10px}
+.phone-call .btns i{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:14px}
+
+/* QUIZ (10-second check) */
+.quiz{background:var(--y);border-block:2px solid var(--ink);overflow:hidden}
+.quiz:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(17,17,17,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(17,17,17,.06) 1px,transparent 1px);background-size:34px 34px;pointer-events:none}
+.quiz-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:start;position:relative}
+.quiz .sub{color:var(--ink-2)}
+.qopts{display:grid;gap:12px}
+.qo{display:flex;align-items:center;gap:14px;text-align:left;background:#fff;border:2px solid var(--ink);border-radius:16px;padding:15px 18px;font-size:16px;font-weight:600;box-shadow:0 4px 0 var(--ink);transition:transform .12s,box-shadow .12s,background .15s}
+.qo:hover{transform:translateY(-2px);box-shadow:0 6px 0 var(--ink)}
+.qo .e{width:40px;height:40px;flex:none;border-radius:12px;background:var(--y-s);border:1.5px solid var(--ink);display:grid;place-items:center;font-size:20px}
+.qo.on{background:var(--ink);color:#fff}
+.qo.on .e{background:var(--y)}
+.qres{margin-top:24px;background:var(--ink);color:#fff;border:2px solid var(--ink);border-radius:22px;padding:24px;box-shadow:6px 6px 0 rgba(0,0,0,.25);display:none}
+.qres.show{display:block;animation:popin .4s cubic-bezier(.2,1.4,.4,1)}
+@keyframes popin{from{transform:scale(.9);opacity:0}to{transform:none;opacity:1}}
+.qres .tg{font-size:12px;font-weight:800;letter-spacing:.08em;color:var(--y)}
+.qres h3{font-size:28px;margin:8px 0 8px;color:#fff}
+.qres p{color:#ddd}
+.qres .fx2{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 18px}
+.qres .fx2 span{font-size:13px;font-weight:700;background:var(--y);color:var(--ink);border-radius:99px;padding:5px 12px}
+.reasons{margin-top:26px;display:grid;gap:10px}
+.reasons div{display:flex;gap:10px;align-items:flex-start;font-weight:600;font-size:15px}
+.reasons i{font-style:normal;flex:none;width:26px;height:26px;border-radius:8px;background:var(--ink);color:var(--y);display:grid;place-items:center;font-size:13px}
+@media(max-width:900px){.quiz-grid{grid-template-columns:1fr}}
+
+/* COMPARE */
+.cmp-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px;align-items:center;margin-top:36px}
+.toggle{display:inline-flex;background:#fff;border:2px solid var(--ink);border-radius:99px;padding:5px;box-shadow:0 4px 0 var(--ink);position:relative;margin-top:24px}
+.toggle button{min-width:138px;position:relative;z-index:2;border:0;background:none;font-weight:700;font-size:15px;padding:11px 20px;border-radius:99px;transition:color .25s}
+.toggle .knob{position:absolute;z-index:1;top:5px;bottom:5px;left:5px;width:calc(50% - 5px);border-radius:99px;background:var(--ink);transition:transform .35s cubic-bezier(.3,1.3,.5,1),background .3s}
+.toggle.m .knob{transform:translateX(100%);background:var(--y);box-shadow:inset 0 0 0 2px var(--ink)}
+.toggle button.act{color:#fff}
+.toggle.m button.act{color:var(--ink)}
+.brain{background:#fff;border:2px solid var(--ink);border-radius:24px;padding:30px 24px;text-align:center;box-shadow:var(--sh2);transition:background .35s}
+.brain .emo{font-size:84px;line-height:1;display:inline-block;transition:transform .4s cubic-bezier(.3,1.5,.5,1)}
+.brain .bm{height:14px;border:2px solid var(--ink);border-radius:99px;margin:18px 0 10px;overflow:hidden;background:#f2f2f2}
+.brain .bm i{display:block;height:100%;width:18%;background:var(--red);transition:width .6s ease,background .4s}
+.brain b{font-size:17px}
+.brain.good{background:var(--ink);color:#fff}
+.clist{list-style:none;display:grid;gap:12px}
+.clist li{display:flex;gap:14px;align-items:center;background:#fff;border:1.5px solid var(--line);border-radius:16px;padding:16px 18px;font-size:16.5px;font-weight:500;animation:slide .4s both}
+.clist li:nth-child(2){animation-delay:.05s}.clist li:nth-child(3){animation-delay:.1s}.clist li:nth-child(4){animation-delay:.15s}.clist li:nth-child(5){animation-delay:.2s}
+@keyframes slide{from{opacity:0;transform:translateX(20px)}}
+.clist .ic{flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-weight:800;color:#fff;background:var(--red)}
+.cmp.good .clist li{background:var(--y-s);border-color:var(--ink)}
+.cmp.good .clist .ic{background:var(--ink);color:var(--y)}
+@media(max-width:860px){.cmp-grid{grid-template-columns:1fr}.brain{max-width:340px;margin:0 auto}}
+
+/* STEPS */
+.steps-sec{background:var(--bg);border-top:2px solid var(--ink)}
+.levels{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:56px;position:relative}
+.levels:before{content:"";position:absolute;top:38px;left:10%;right:10%;border-top:3px dashed #cfc8b5;z-index:0}
+.lvl{text-align:center;position:relative;z-index:1}
+.lvl .num{width:76px;height:76px;border-radius:22px;margin:0 auto 16px;display:grid;place-items:center;font-family:"Bricolage Grotesque";font-weight:800;font-size:30px;border:2px solid var(--ink);box-shadow:0 6px 0 var(--ink);transition:transform .3s}
+.lvl:hover .num{transform:translateY(-6px) rotate(-6deg)}
+.lvl:nth-child(odd) .num{background:var(--y)}
+.lvl:nth-child(even) .num{background:#fff}
+.lvl.boss .num{background:var(--ink);color:var(--y)}
+.lvl small{font-size:11px;font-weight:800;letter-spacing:.1em;color:var(--mute)}
+.lvl h3{font-size:20px;margin:5px 0 6px}
+.lvl p{font-size:14px;color:var(--mute)}
+.rail{display:none}
+@media(max-width:900px){
+  .levels{grid-template-columns:1fr;gap:26px;padding-left:64px}
+  .levels:before{display:none}
+  .rail{display:block;position:absolute;left:24px;top:10px;bottom:10px;width:6px;border-radius:9px;background:#e7e1cf}
+  .rail .rf{position:absolute;left:0;top:0;width:100%;height:0;border-radius:9px;background:var(--ink)}
+  .rail .rk{position:absolute;left:50%;top:0;transform:translate(-50%,-50%);font-size:26px;background:var(--y);border:2px solid var(--ink);border-radius:50%;width:42px;height:42px;display:grid;place-items:center}
+  .lvl{text-align:left;display:grid;grid-template-columns:60px 1fr;gap:14px;align-items:start;opacity:.45;transition:opacity .3s}
+  .lvl.lit{opacity:1}
+  .lvl .num{width:60px;height:60px;font-size:24px;margin:0;border-radius:18px}
+}
+
+/* BOOK CALL */
+.book{background:var(--ink);color:#fff}
+.book-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+.book .sub{color:#ccc}
+.perks{display:grid;gap:10px;margin:22px 0 26px}
+.perks div{display:flex;gap:12px;align-items:center;font-weight:600}
+.perks i{font-style:normal;width:30px;height:30px;flex:none;border-radius:10px;background:var(--y);color:var(--ink);display:grid;place-items:center}
+.form{background:#fff;color:var(--ink);border:2px solid var(--y);border-radius:22px;padding:22px;display:grid;gap:12px;box-shadow:6px 6px 0 var(--y)}
+.form label{font-size:13px;font-weight:700;display:grid;gap:6px}
+.form input,.form select{font:500 15px Inter,sans-serif;padding:12px 14px;border:2px solid var(--ink);border-radius:12px;background:#fff;width:100%;outline:none}
+.form input:focus,.form select:focus{box-shadow:0 0 0 3px var(--y)}
+.form .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form .btn{width:100%;margin-top:4px}
+.form .note{font-size:12.5px;color:var(--mute);text-align:center}
+.phone{width:310px;max-width:100%;margin:0 auto;background:#0b141a;border:3px solid #333;border-radius:36px;padding:12px;box-shadow:0 30px 60px -20px rgba(245,197,24,.35)}
+.ph-top{display:flex;align-items:center;gap:10px;background:#1f2c34;border-radius:24px 24px 0 0;padding:12px 14px;color:#fff}
+.ph-top .av{width:36px;height:36px;border-radius:50%;overflow:hidden;background:var(--y)}
+.ph-top .av img{width:100%;height:100%;object-fit:cover;object-position:50% 15%}
+.ph-top b{font-size:14px;display:block}.ph-top small{font-size:11px;color:#8fa;}
+.ph-body{background:#efe7dd;background-image:radial-gradient(rgba(0,0,0,.05) 1px,transparent 1px);background-size:14px 14px;min-height:390px;border-radius:0 0 24px 24px;padding:14px 10px;display:flex;flex-direction:column;gap:8px}
+.msg{max-width:82%;padding:8px 10px 6px;border-radius:12px;font-size:13.5px;line-height:1.4;color:#111;box-shadow:0 1px 1px rgba(0,0,0,.12);opacity:0;transform:translateY(10px) scale(.96);transition:opacity .35s,transform .35s}
+.msg.show{opacity:1;transform:none}
+.msg.me{align-self:flex-end;background:#d9fdd3;border-top-right-radius:3px}
+.msg.her{align-self:flex-start;background:#fff;border-top-left-radius:3px}
+.msg time{display:block;text-align:right;font-size:10px;color:#777;margin-top:2px}
+.typing{align-self:flex-start;background:#fff;border-radius:12px;padding:10px 12px;display:none;gap:4px}
+.typing.show{display:flex}
+.typing i{width:6px;height:6px;border-radius:50%;background:#999;animation:tp 1s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes tp{50%{transform:translateY(-4px);opacity:.4}}
+.ph-cap{text-align:center;color:#aaa;font-size:13px;margin-top:14px;font-family:Caveat,cursive;font-size:22px;color:var(--y)}
+@media(max-width:900px){.book-grid{grid-template-columns:1fr}.form .row{grid-template-columns:1fr}}
+
+/* REVIEWS */
+.tabs{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:30px}
+.tab{border:2px solid var(--ink);background:#fff;border-radius:99px;padding:10px 18px;font-weight:700;font-size:14.5px;box-shadow:0 3px 0 var(--ink);transition:background .2s}
+.tab.on{background:var(--ink);color:var(--y)}
+.tabpane{display:none;margin-top:34px}
+.tabpane.on{display:block;animation:popin .35s ease}
+.rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.rc{border:2px solid var(--ink);border-radius:22px;padding:22px;background:#fff;box-shadow:var(--sh);position:relative}
+.rc:nth-child(2){background:var(--y)}
+.rc:nth-child(3){background:var(--ink);color:#fff}
+.rc .stars{color:var(--y-d);letter-spacing:3px;font-size:18px}
+.rc:nth-child(2) .stars{color:var(--ink)}
+.rc:nth-child(3) .stars{color:var(--y)}
+.sk{height:10px;border-radius:6px;background:rgba(0,0,0,.1);margin:10px 0}
+.rc:nth-child(3) .sk{background:rgba(255,255,255,.18)}
+.sk.s{width:70%}.sk.xs{width:45%}
+.rc .who{display:flex;align-items:center;gap:10px;margin-top:18px}
+.rc .who .av{width:42px;height:42px;border-radius:50%;border:2px dashed currentColor;display:grid;place-items:center;font-size:16px;opacity:.6}
+.rc .who div{flex:1}
+.soon{position:absolute;top:-12px;right:16px;font-size:11px;font-weight:800;letter-spacing:.06em;background:#fff;color:var(--ink);border:1.5px solid var(--ink);border-radius:99px;padding:3px 10px}
+.chats{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.mini-phone{background:#0b141a;border-radius:28px;padding:9px;border:2px solid var(--ink);box-shadow:var(--sh)}
+.mini-phone .ph-top{border-radius:20px 20px 0 0;padding:10px 12px}
+.mini-phone .ph-body{min-height:260px;border-radius:0 0 20px 20px}
+.mini-phone .msg .sk{height:8px;margin:5px 0;background:rgba(0,0,0,.12);min-width:120px}
+.results{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.res{border:2px solid var(--ink);border-radius:20px;padding:20px;text-align:center;box-shadow:var(--sh);background:#fff}
+.res:nth-child(odd){background:var(--y)}
+.res .big{font-family:"Bricolage Grotesque";font-weight:800;font-size:38px;opacity:.35}
+.res .ph2{width:64px;height:64px;border-radius:50%;margin:0 auto 10px;border:2px dashed var(--ink);display:grid;place-items:center;opacity:.5}
+.rev-note{text-align:center;color:var(--mute);font-size:14px;margin-top:22px}
+@media(max-width:900px){.rgrid,.chats{grid-template-columns:1fr}.results{grid-template-columns:1fr 1fr}}
+
+/* MENTOR */
+.mentor{background:var(--bg);border-block:2px solid var(--ink)}
+.mentor-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center}
+.flip{perspective:1300px;width:100%;max-width:400px;aspect-ratio:4/5;justify-self:center;cursor:pointer;outline:none}
+.flip-in{position:relative;width:100%;height:100%;transition:transform .8s cubic-bezier(.2,.8,.2,1);transform-style:preserve-3d}
+.flip:hover .flip-in,.flip.on .flip-in{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border:2.5px solid var(--ink);border-radius:28px;overflow:hidden;box-shadow:8px 8px 0 var(--ink)}
+.face.f{background:var(--y)}
+.face.f img{width:100%;height:100%;object-fit:cover}
+.face.f .nm{position:absolute;left:14px;right:14px;bottom:14px;background:#fff;border:2px solid var(--ink);border-radius:16px;padding:12px 14px;display:flex;justify-content:space-between;align-items:center}
+.face.f .nm b{font-family:"Bricolage Grotesque";font-size:20px;display:block}
+.face.f .nm small{color:var(--mute);font-size:13px}
+.face.f .nm span{font-size:12px;font-weight:800;background:var(--ink);color:var(--y);border-radius:99px;padding:6px 10px;white-space:nowrap}
+.face.b{transform:rotateY(180deg);background:var(--ink);color:#fff;padding:28px;display:flex;flex-direction:column;justify-content:center;gap:14px}
+.face.b .tg{font-size:12px;font-weight:800;letter-spacing:.08em;color:var(--y)}
+.face.b h3{font-size:26px}
+.face.b p{color:#ddd;font-size:15px}
+.face.b .sp{background:var(--y);color:var(--ink);border-radius:16px;padding:12px 14px;font-size:14px}
+.face.b .sp b{display:block;font-size:11px;letter-spacing:.08em}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:26px 0}
+.fact{border:2px solid var(--ink);border-radius:16px;padding:14px;background:#fff;font-weight:600;font-size:15px;display:flex;gap:10px;align-items:center}
+.fact:nth-child(2),.fact:nth-child(3){background:var(--y)}
+.fact i{font-style:normal;font-size:22px}
+.quote{font-family:Caveat,cursive;font-size:28px;line-height:1.2;border-left:5px solid var(--y);padding-left:16px;margin-top:6px}
+@media(max-width:900px){.mentor-grid{grid-template-columns:1fr}.facts{grid-template-columns:1fr}}
+
+/* PARENTS */
+.parents{background:#fff}
+.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
+.pc{border:2px solid var(--ink);border-radius:22px;padding:24px;box-shadow:var(--sh);transition:transform .2s}
+.pc:hover{transform:translateY(-4px)}
+.pc .ic{width:52px;height:52px;border-radius:16px;border:2px solid var(--ink);display:grid;place-items:center;font-size:24px;margin-bottom:14px;background:#fff}
+.pc h3{font-size:21px;margin-bottom:8px}
+.pc p{font-size:14.5px;color:var(--ink-2)}
+.pc:nth-child(1){background:var(--y)}
+.pc:nth-child(2){background:#fff}
+.pc:nth-child(3){background:var(--ink);color:#fff}.pc:nth-child(3) p{color:#ccc}.pc:nth-child(3) .ic{background:var(--y)}
+.pc:nth-child(4){background:var(--y-s)}
+.pbar{margin-top:30px;border:2px solid var(--ink);border-radius:24px;padding:22px 26px;background:var(--ink);color:#fff;display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between;box-shadow:6px 6px 0 var(--y)}
+.pbar h3{font-size:24px}
+.pbar p{color:#ccc;font-size:15px}
+.pbar .acts{display:flex;flex-wrap:wrap;gap:12px}
+.pbar .btn-y{box-shadow:0 5px 0 var(--y-d)}
+@media(max-width:980px){.pgrid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.pgrid{grid-template-columns:1fr}}
+
+/* PRICE */
+.price{background:var(--y);border-block:2px solid var(--ink)}
+.price-card{max-width:880px;margin:40px auto 0;display:grid;grid-template-columns:1fr 1fr;border:2.5px solid var(--ink);border-radius:30px;overflow:hidden;box-shadow:10px 10px 0 var(--ink);background:#fff}
+.pl{background:var(--ink);color:#fff;padding:34px}
+.pl .tg{font-size:12px;font-weight:800;letter-spacing:.08em;color:var(--y)}
+.pl .amt{font-family:"Bricolage Grotesque";font-weight:800;font-size:76px;line-height:1;margin:14px 0 4px;color:var(--y)}
+.pl .amt small{font-size:18px;color:#ccc;font-family:Inter;font-weight:500}
+.pl p{color:#ccc}
+.pl .btn{margin-top:26px;width:100%}
+.pr{padding:30px 34px}
+.pr ul{list-style:none;display:grid;gap:11px}
+.pr li{display:flex;gap:10px;font-size:15.5px}
+.pr li:before{content:"✓";flex:none;width:24px;height:24px;border-radius:50%;background:var(--y);border:2px solid var(--ink);display:grid;place-items:center;font-weight:800;font-size:12px}
+@media(max-width:760px){.price-card{grid-template-columns:1fr}}
+
+/* FAQ */
+.faq{max-width:840px;margin:40px auto 0;display:grid;gap:14px}
+.faq details{border:2px solid var(--ink);border-radius:18px;background:#fff;box-shadow:0 4px 0 var(--ink);overflow:hidden;transition:background .2s}
+.faq details[open]{background:var(--y-s)}
+.faq summary{list-style:none;cursor:pointer;padding:19px 22px;font-weight:700;font-size:17px;display:flex;justify-content:space-between;gap:16px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";flex:none;width:34px;height:34px;border-radius:50%;background:var(--y);border:2px solid var(--ink);display:grid;place-items:center;font-size:20px;transition:transform .25s,background .25s}
+.faq details[open] summary:after{transform:rotate(45deg);background:var(--ink);color:var(--y)}
+.faq .ans{padding:0 22px 20px;color:var(--ink-2)}
+
+/* FINAL */
+.final{padding:30px 0 110px}
+.launch{background:var(--ink);border-radius:36px;padding:80px 26px;text-align:center;position:relative;overflow:hidden;color:#fff;border:2px solid var(--ink)}
+.launch .sky i{position:absolute;width:3px;height:3px;background:#fff;border-radius:50%;animation:twk 3s infinite}
+@keyframes twk{50%{opacity:.15}}
+.launch .cell{position:absolute;border-radius:50%}
+.launch .c1{width:200px;height:200px;right:-60px;top:-60px;background:radial-gradient(circle at 30% 30%,#FFE58A,#F5C518 55%,#a07a00)}
+.launch .c2{width:100px;height:100px;left:6%;bottom:10%;background:radial-gradient(circle at 30% 30%,#fff,#ddd 60%,#888)}
+.launch .c2:after,.launch .c1:after{content:"";position:absolute;width:30%;height:30%;left:35%;top:35%;border-radius:50%;background:rgba(17,17,17,.25)}
+.mini-helix{position:relative;width:260px;height:110px;margin:0 auto 18px;transition:transform 1.3s cubic-bezier(.5,0,.8,.2),opacity 1.3s}
+.launch.go .mini-helix{transform:translateY(-640px) scale(1.4) rotate(-10deg);opacity:.2}
+.launch h2{font-size:clamp(38px,6vw,74px);position:relative}
+.launch p{color:#cfcfcf;font-size:18px;margin:16px auto 32px;max-width:560px;position:relative}
+.launch .btn{position:relative;font-size:18px;padding:17px 30px}
+.count{font-family:Caveat,cursive;color:var(--y);font-size:30px;height:38px;margin-top:16px;position:relative}
+
+footer{border-top:2px solid var(--ink);padding:40px 0;background:#fff}
+.ft{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;align-items:center;font-size:14px;color:var(--mute)}
+.ft .links{display:flex;gap:18px;flex-wrap:wrap;font-weight:600;color:var(--ink)}
+.ft .links a:hover{color:var(--y-d)}
+
+/* floating */
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:90;width:62px;height:62px;border-radius:50%;background:var(--green);border:2px solid var(--ink);box-shadow:0 4px 0 var(--ink);display:grid;place-items:center;transition:transform .2s}
+.wa-float:hover{transform:scale(1.08) rotate(-6deg)}
+.toast{position:fixed;left:18px;bottom:18px;z-index:85;width:310px;max-width:calc(100% - 100px);background:#fff;border:2px solid var(--ink);border-radius:16px;box-shadow:var(--sh);padding:12px 36px 12px 12px;display:flex;gap:10px;align-items:center;font-size:13.5px;transform:translateY(140%);transition:transform .45s cubic-bezier(.3,1.3,.5,1)}
+.toast.show{transform:none}
+.toast .ti{flex:none;width:38px;height:38px;border-radius:12px;background:var(--y);border:1.5px solid var(--ink);display:grid;place-items:center;font-size:18px}
+.toast b{display:block;font-size:13.5px}
+.toast small{color:var(--mute)}
+.toast .x{position:absolute;right:8px;top:6px;border:0;background:none;font-size:16px;color:var(--mute)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.chip{opacity:0}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 32 32"><path fill="currentColor" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3Zm0 23.6c-2 0-4-.6-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6Zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5 1-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.3 1.4 3.5c.2.2 2.4 3.7 5.9 5.2 2.2.9 3 1 4.1.8.7-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5l-.7-.3Z"/></symbol>
+</svg>
+
+<!-- ================= NAV ================= -->
+<nav class="nav">
+  <div class="wrap">
+    <a href="#top" class="brand"><span class="bm">🧬</span><span>NEET Guidance<small>by Meenakshi Ma'am</small></span></a>
+    <div class="menu">
+      <a href="#notes">Study material</a>
+      <a href="#how">How it works</a>
+      <a href="#parents">For parents</a>
+      <a href="#faq">FAQs</a>
+      <a href="#book" class="btn btn-y">Book first call</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="pill"><b>7 YEARS</b> of guiding NEET aspirants</span>
+      <h1>NEET prep,<br><span class="ul">made personal.<svg viewBox="0 0 400 30" preserveAspectRatio="none"><path d="M5 22 C 90 6, 200 4, 395 16"/></svg></span><br><span class="blk">Till exam day.</span></h1>
+      <p class="lead">1:1 calls with Meenakshi Ma'am for study guidance and moral support, plus every note, mind map and PYQ you need. Built on NCERT, explained like a story.</p>
+      <div class="hero-cta">
+        <a class="btn btn-k" href="#book">📞 Book my first call <span class="arr">→</span></a>
+        <a class="btn" href="#notes">See study material</a>
+      </div>
+      <div class="proof">
+        <span class="av"><img src="meenakshi.jpg" alt="Meenakshi Ma'am"></span>
+        <div><b>Meenakshi Ma'am · NEET mentor</b><small>Works alongside your coaching · Class 11, 12 and droppers</small></div>
+      </div>
+    </div>
+
+    <div class="stage" id="dna" aria-label="Animation: study tools charge a DNA helix from Average Aspirant to NEET-ready">
+      <i class="sparkle" style="left:8%;top:20%">✦</i><i class="sparkle" style="left:86%;top:28%;animation-delay:.6s">✦</i>
+      <i class="sparkle" style="left:16%;top:80%;animation-delay:1.1s">✦</i><i class="sparkle" style="left:72%;top:86%;animation-delay:1.7s">✦</i>
+      <i class="sparkle" style="left:52%;top:30%;animation-delay:.3s">✦</i><i class="sparkle" style="left:94%;top:66%;animation-delay:2s">✦</i>
+      <div class="status"><span class="t" id="dnaT">Average NEET Aspirant 😐</span>
+        <div class="meter"><span>NEET-READY</span><span class="track"><span class="fill" id="dnaF"></span></span><span id="dnaP">0%</span></div>
+      </div>
+      <div class="glow"></div>
+      <div class="helix-box"><div class="helix" id="helix"></div></div>
+      <span class="chip yy" style="left:2%;top:26%">📸 Photo Notes</span>
+      <span class="chip" style="left:60%;top:22%">🧠 Mind Maps</span>
+      <span class="chip k" style="left:4%;top:62%">📚 PYQ Bank</span>
+      <span class="chip" style="left:30%;top:80%">✍️ NCERT Worksheets</span>
+      <span class="chip yy" style="left:66%;top:72%">📞 1:1 Calls</span>
+      <span class="chip k" style="left:40%;top:36%">💛 Moral Support</span>
+      <span class="chip" style="left:74%;top:46%">🗺️ Study Plan</span>
+      <div class="postit">P.S. Coaching teaches. Ma'am <u>guides</u>. 💛</div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= RIBBONS ================= -->
+<div class="ribbons" aria-hidden="true">
+  <div class="rib r1"><div class="tr" id="rib1"></div></div>
+  <div class="rib r2"><div class="tr" id="rib2"></div></div>
+</div>
+
+<!-- ================= STATS ================= -->
+<section style="padding-top:40px;padding-bottom:40px">
+  <div class="wrap center">
+    <span class="eyebrow rv">Why students stay</span>
+    <h2 class="h2 rv">Small batch of one. <span class="mark">Big difference.</span></h2>
+    <div class="stats" style="text-align:left">
+      <div class="stat s-y rv"><b>7 yrs</b><span>Guiding NEET aspirants</span><small>and still picking up every call</small></div>
+      <div class="stat s-k rv"><b>1 : 1</b><span>Personal calls</span><small>no crowded batch, no being "roll no. 147"</small></div>
+      <div class="stat s-w rv"><b>4</b><span>Subjects covered</span><small>Physics, Chemistry, Botany, Zoology</small></div>
+      <div class="stat s-l rv"><b>Weekly</b><span>Parent updates</span><small>because parents worry too 💛</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= NOTES ================= -->
+<section class="notes" id="notes">
+  <div class="wrap">
+    <div class="notes-head">
+      <div>
+        <span class="eyebrow rv">Study material that actually helps 📚</span>
+        <h2 class="h2 rv">Notes that <span class="mark">stick.</span></h2>
+        <p class="sub rv">Short, visual and built line by line from NCERT. Swipe through to see what each one does for your score.</p>
+      </div>
+      <a href="#book" class="btn rv">Get all of it →</a>
+    </div>
+  </div>
+  <div class="cf-wrap">
+    <button class="cf-btn cf-prev" id="cfPrev" aria-label="Previous">←</button>
+    <div class="cf" id="cf">
+      <article class="nc y">
+        <div class="art photo"><div class="paper">
+          <svg width="78" height="62" viewBox="0 0 78 62"><ellipse cx="39" cy="31" rx="36" ry="27" fill="#FFF7D6" stroke="#111" stroke-width="2.5"/><ellipse cx="39" cy="31" rx="13" ry="10" fill="#F5C518" stroke="#111" stroke-width="2.5"/><circle cx="16" cy="20" r="4" fill="#111"/><circle cx="60" cy="42" r="4" fill="#111"/><path d="M58 18c4 2 6 5 6 9" stroke="#111" stroke-width="2" fill="none"/></svg>
+          <div class="ln"></div><div class="ln s"></div><div class="ln"></div><div class="ln s"></div><div class="ln"></div><div class="ln s"></div>
+        </div></div>
+        <div class="bd"><span class="badge">Start here</span><h3>Photo Notes</h3>
+          <div class="fxs"><b>Side effect:</b> diagrams start showing up in your dreams. Fully labelled.</div>
+          <ul><li>Real NCERT diagrams + short NCERT explanation</li><li>Revise a whole chapter in minutes</li></ul></div>
+      </article>
+      <article class="nc k">
+        <div class="art mm"><svg viewBox="0 0 330 190" width="100%" height="100%">
+          <g stroke="#F5C518" stroke-width="2.5" fill="none"><path d="M165 95 L70 45"/><path d="M165 95 L260 40"/><path d="M165 95 L60 145"/><path d="M165 95 L270 150"/><path d="M165 95 L165 168"/></g>
+          <rect x="115" y="75" width="100" height="40" rx="12" fill="#F5C518" stroke="#fff" stroke-width="2"/><text x="165" y="100" text-anchor="middle" font-family="Inter" font-weight="800" font-size="13" fill="#111">CHAPTER</text>
+          <g font-family="Inter" font-weight="700" font-size="11" fill="#111"><rect x="30" y="30" width="80" height="28" rx="9" fill="#fff"/><text x="70" y="48" text-anchor="middle">Concept</text><rect x="220" y="25" width="80" height="28" rx="9" fill="#fff"/><text x="260" y="43" text-anchor="middle">Formula</text><rect x="20" y="132" width="80" height="28" rx="9" fill="#fff"/><text x="60" y="150" text-anchor="middle">Diagram</text><rect x="230" y="136" width="80" height="28" rx="9" fill="#fff"/><text x="270" y="154" text-anchor="middle">PYQ tip</text></g>
+        </svg></div>
+        <div class="bd"><span class="badge">Revision hack</span><h3>Mind Maps</h3>
+          <div class="fxs"><b>Side effect:</b> a whole chapter fits on one page. Your bag gets lighter.</div>
+          <ul><li>All 4 subjects: Physics, Chemistry, Botany, Zoology</li><li>Perfect for last-minute revision</li></ul></div>
+      </article>
+      <article class="nc">
+        <div class="art bank">
+          <span class="qchip" style="left:22px;top:24px;transform:rotate(-6deg)">NEET PYQ 2024</span>
+          <span class="qchip k" style="left:170px;top:30px;transform:rotate(5deg)">NCERT · L-12</span>
+          <span class="qchip w" style="left:40px;top:84px;transform:rotate(3deg)">Chapter-wise ✓</span>
+          <span class="qchip" style="left:180px;top:96px;transform:rotate(-4deg)">PYQ 2019</span>
+          <span class="qchip k" style="left:70px;top:140px;transform:rotate(-2deg)">All 4 subjects</span>
+        </div>
+        <div class="bd"><span class="badge">Most used</span><h3>NCERT + PYQ Question Bank</h3>
+          <div class="fxs"><b>Side effect:</b> NEET questions start looking… strangely familiar.</div>
+          <ul><li>Chapter-wise NCERT + NEET previous-year questions</li><li>Practise exactly what NEET asks</li></ul></div>
+      </article>
+      <article class="nc k">
+        <div class="art ws"><div class="wsheet">The <u>&nbsp;</u> is the site of photosynthesis.<br>DNA replication is <u>&nbsp;</u>.<br><span class="sc">Target: 360 / 360 🎯</span></div></div>
+        <div class="bd"><span class="badge">Biology booster</span><h3>Line-by-line Worksheets</h3>
+          <div class="fxs"><b>Side effect:</b> you start quoting NCERT lines at family dinners.</div>
+          <ul><li>Special NCERT line-by-line sheets for Botany and Zoology</li><li>Built to aim for 360/360 in Biology</li></ul></div>
+      </article>
+      <article class="nc y">
+        <div class="art plan"><div class="chk"><span><i>✓</i> Cell: The Unit of Life</span><span><i>✓</i> Laws of Motion</span><span><i>✓</i> Chemical Bonding</span><span><i class="e"></i> Human Physiology</span><span><i class="e"></i> Organic Chem basics</span></div></div>
+        <div class="bd"><span class="badge">No more confusion</span><h3>Full Syllabus Plan</h3>
+          <div class="fxs"><b>Side effect:</b> "What should I study today?" leaves your vocabulary.</div>
+          <ul><li>The complete NEET syllabus, mapped and paced</li><li>Always know what comes next</li></ul></div>
+      </article>
+      <article class="nc">
+        <div class="art call"><div class="phone-call"><div class="ph"><img src="meenakshi.jpg" alt=""></div><b>Meenakshi Ma'am</b><small>calling…</small><div class="btns"><i style="background:#EF4444">✕</i><i style="background:#25D366">✆</i></div></div></div>
+        <div class="bd"><span class="badge">The main thing ❤️</span><h3>1:1 Guidance Calls</h3>
+          <div class="fxs"><b>Side effect:</b> you stop panicking alone at 11 PM.</div>
+          <ul><li>Study plan, test analysis, weak-chapter fixes</li><li>Moral support all the way to NEET day</li></ul></div>
+      </article>
+    </div>
+    <button class="cf-btn cf-next" id="cfNext" aria-label="Next">→</button>
+  </div>
+  <div class="dots" id="dots"></div>
+</section>
+
+<!-- ================= 10-SECOND CHECK ================= -->
+<section class="quiz" id="check">
+  <div class="wrap quiz-grid">
+    <div>
+      <span class="eyebrow dk rv">10-second check ⏱️</span>
+      <h2 class="h2 rv">What's really slowing you down?</h2>
+      <p class="sub rv">Be honest. Nobody's judging. Tap the line that sounds most like you, and see how Ma'am fixes it.</p>
+      <div class="reasons rv">
+        <div><i>1</i>Studying hard, but not studying right</div>
+        <div><i>2</i>Reading again and again, forgetting again and again</div>
+        <div><i>3</i>Mock scores stuck in the same range</div>
+        <div><i>4</i>Nobody to talk to when it gets heavy</div>
+      </div>
+    </div>
+    <div>
+      <div class="qopts" id="qopts">
+        <button class="qo" data-k="plan"><span class="e">🌀</span>I study 10 hours but don't know if it's the right stuff.</button>
+        <button class="qo" data-k="forget"><span class="e">🫠</span>I read it, I forget it. Every. Single. Time.</button>
+        <button class="qo" data-k="bio"><span class="e">🧬</span>Biology should be my scoring subject. It isn't.</button>
+        <button class="qo" data-k="mock"><span class="e">📉</span>My mock test scores refuse to move.</button>
+        <button class="qo" data-k="mood"><span class="e">🥺</span>Honestly? I feel low and alone in this.</button>
+      </div>
+      <div class="qres" id="qres"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMPARE ================= -->
+<section id="compare">
+  <div class="wrap center">
+    <span class="eyebrow rv">Why NEET Guidance?</span>
+    <h2 class="h2 rv" id="cmpH">Your brain on <span class="mark">solo prep.</span></h2>
+    <p class="sub rv">Flip the switch. See the difference.</p>
+    <div class="toggle rv" id="tg"><span class="knob"></span><button data-m="0" class="act">Prep alone</button><button data-m="1">With Ma'am</button></div>
+    <div class="cmp-grid cmp" id="cmp" style="text-align:left">
+      <div class="brain rv" id="brain"><span class="emo" id="emo">😵‍💫</span><div class="bm"><i id="bmeter"></i></div><b id="btxt">Brain: buffering…</b></div>
+      <ul class="clist" id="clist"></ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HOW IT WORKS ================= -->
+<section class="steps-sec" id="how">
+  <div class="wrap center">
+    <span class="eyebrow rv">Simple process</span>
+    <h2 class="h2 rv">How it works. <span class="mark">Level by level.</span></h2>
+    <p class="sub rv">From your first "Hi Ma'am" on WhatsApp all the way to NEET exam day.</p>
+    <div class="levels" id="levels">
+      <div class="rail"><div class="rf" id="rf"></div><div class="rk" id="rk">🧬</div></div>
+      <div class="lvl"><div class="num">1</div><div><small>LEVEL 1</small><h3>Say hi on WhatsApp</h3><p>Message 96062 53579. Students and parents can ask anything.</p></div></div>
+      <div class="lvl"><div class="num">2</div><div><small>LEVEL 2</small><h3>First call with Ma'am</h3><p>She understands where you stand: class, scores, weak chapters, worries.</p></div></div>
+      <div class="lvl"><div class="num">3</div><div><small>LEVEL 3</small><h3>Join and unlock</h3><p>Join for ₹9,000/year. Notes, Mind Maps, PYQ bank and worksheets unlock.</p></div></div>
+      <div class="lvl"><div class="num">4</div><div><small>LEVEL 4</small><h3>Regular guidance</h3><p>Calls, test analysis, plan tweaks, moral support and weekly parent updates.</p></div></div>
+      <div class="lvl boss"><div class="num">★</div><div><small>BOSS LEVEL</small><h3>NEET exam day</h3><p>You walk in prepared and calm, with Ma'am in your corner till the end.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BOOK FIRST CALL ================= -->
+<section class="book on-dark" id="book">
+  <div class="wrap book-grid">
+    <div>
+      <span class="eyebrow dk" style="border-color:var(--y)">Book my first call 📞</span>
+      <h2 class="h2" style="color:#fff">Talk to Ma'am <span class="mark">before you decide.</span></h2>
+      <p class="sub">Tell us a little about yourself. It opens WhatsApp with your message ready. Just hit send.</p>
+      <div class="perks">
+        <div><i>🎯</i>Understand exactly where you stand</div>
+        <div><i>🗺️</i>Get a clear plan for your next steps</div>
+        <div><i>👨‍👩‍👧</i>Parents are welcome to join the call</div>
+      </div>
+      <form class="form" id="bookForm">
+        <div class="row">
+          <label>Your name<input id="fName" required placeholder="e.g. Aditi"></label>
+          <label>I am a…<select id="fWho"><option>Student</option><option>Parent</option></select></label>
+        </div>
+        <div class="row">
+          <label>Class<select id="fClass"><option>Class 11</option><option>Class 12</option><option>Dropper</option><option>Class 10 (early start)</option></select></label>
+          <label>Best time to call<select id="fTime"><option>Morning</option><option>Afternoon</option><option selected>Evening</option><option>Any time</option></select></label>
+        </div>
+        <label>Biggest worry right now (optional)<input id="fWorry" placeholder="e.g. Physics numericals, low mock scores…"></label>
+        <button class="btn btn-y" type="submit"><svg width="20" height="20" style="color:var(--ink)"><use href="#wa"/></svg> Book on WhatsApp <span class="arr">→</span></button>
+        <p class="note">Or call / WhatsApp directly: <b>96062 53579</b></p>
+      </form>
+    </div>
+    <div>
+      <div class="phone">
+        <div class="ph-top"><span class="av"><img src="meenakshi.jpg" alt=""></span><div><b>Meenakshi Ma'am</b><small>online</small></div></div>
+        <div class="ph-body" id="chat">
+          <div class="msg me">Hi Ma'am! I want to book my first call 🙋‍♀️<time>6:02 PM ✓✓</time></div>
+          <div class="msg her">Hi! So happy you reached out 😊 Which class are you in?<time>6:03 PM</time></div>
+          <div class="msg me">Class 12. Biology is okay but Physics scares me 😅<time>6:03 PM ✓✓</time></div>
+          <div class="msg her">Don't worry, that's very common 💛 Let's talk tomorrow at 6 PM. We'll make your plan on the call.<time>6:04 PM</time></div>
+          <div class="msg me">Done! See you tomorrow 🙌<time>6:04 PM ✓✓</time></div>
+          <div class="typing" id="typing"><i></i><i></i><i></i></div>
+        </div>
+      </div>
+      <p class="ph-cap">↑ this is how it starts. Just one message.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= REVIEWS ================= -->
+<!-- REVIEWS: replace each placeholder card with a real review (name, class/score, words). -->
+<section id="reviews">
+  <div class="wrap center">
+    <span class="eyebrow rv">Student stories</span>
+    <h2 class="h2 rv">Don't take our word for it.</h2>
+    <p class="sub rv">Real words from students and parents.</p>
+    <div class="tabs rv" role="tablist">
+      <button class="tab on" data-t="t1">🎓 Students</button>
+      <button class="tab" data-t="t2">👨‍👩‍👧 Parents</button>
+      <button class="tab" data-t="t3">💬 Chats</button>
+      <button class="tab" data-t="t4">🏆 Results</button>
+    </div>
+
+    <div class="tabpane on" id="t1"><div class="rgrid" style="text-align:left">
+      <div class="rc"><span class="soon">REVIEW COMING SOON</span><div class="stars">★★★★★</div><div class="sk"></div><div class="sk"></div><div class="sk s"></div><div class="who"><span class="av">🎓</span><div><div class="sk xs"></div><div class="sk s" style="width:30%"></div></div></div></div>
+      <div class="rc"><span class="soon">REVIEW COMING SOON</span><div class="stars">★★★★★</div><div class="sk"></div><div class="sk"></div><div class="sk s"></div><div class="who"><span class="av">🎓</span><div><div class="sk xs"></div><div class="sk s" style="width:30%"></div></div></div></div>
+      <div class="rc"><span class="soon">REVIEW COMING SOON</span><div class="stars">★★★★★</div><div class="sk"></div><div class="sk"></div><div class="sk s"></div><div class="who"><span class="av">🎓</span><div><div class="sk xs"></div><div class="sk s" style="width:30%"></div></div></div></div>
+    </div></div>
+
+    <div class="tabpane" id="t2"><div class="rgrid" style="text-align:left">
+      <div class="rc"><span class="soon">REVIEW COMING SOON</span><div class="stars">★★★★★</div><div class="sk"></div><div class="sk"></div><div class="sk s"></div><div class="who"><span class="av">👨‍👩‍👧</span><div><div class="sk xs"></div></div></div></div>
+      <div class="rc"><span class="soon">REVIEW COMING SOON</span><div class="stars">★★★★★</div><div class="sk"></div><div class="sk"></div><div class="sk s"></div><div class="who"><span class="av">👨‍👩‍👧</span><div><div class="sk xs"></div></div></div></div>
+      <div class="rc"><span class="soon">REVIEW COMING SOON</span><div class="stars">★★★★★</div><div class="sk"></div><div class="sk"></div><div class="sk s"></div><div class="who"><span class="av">👨‍👩‍👧</span><div><div class="sk xs"></div></div></div></div>
+    </div></div>
+
+    <div class="tabpane" id="t3"><div class="chats">
+      <div class="mini-phone"><div class="ph-top"><span class="av"></span><div><b>Student chat</b><small>screenshot coming soon</small></div></div><div class="ph-body"><div class="msg me"><div class="sk"></div><div class="sk s"></div></div><div class="msg her"><div class="sk"></div></div><div class="msg me"><div class="sk"></div><div class="sk xs"></div></div><div class="msg her"><div class="sk s"></div></div></div></div>
+      <div class="mini-phone"><div class="ph-top"><span class="av"></span><div><b>Parent chat</b><small>screenshot coming soon</small></div></div><div class="ph-body"><div class="msg her"><div class="sk"></div></div><div class="msg me"><div class="sk"></div><div class="sk s"></div></div><div class="msg her"><div class="sk s"></div></div><div class="msg me"><div class="sk xs"></div></div></div></div>
+      <div class="mini-phone"><div class="ph-top"><span class="av"></span><div><b>Result day 🎉</b><small>screenshot coming soon</small></div></div><div class="ph-body"><div class="msg me"><div class="sk"></div><div class="sk"></div></div><div class="msg her"><div class="sk s"></div></div><div class="msg me"><div class="sk xs"></div></div><div class="msg her"><div class="sk"></div></div></div></div>
+    </div></div>
+
+    <div class="tabpane" id="t4"><div class="results">
+      <div class="res"><div class="ph2">📷</div><div class="big">—/720</div><div class="sk s" style="margin:8px auto"></div></div>
+      <div class="res"><div class="ph2">📷</div><div class="big">—/720</div><div class="sk s" style="margin:8px auto"></div></div>
+      <div class="res"><div class="ph2">📷</div><div class="big">—/720</div><div class="sk s" style="margin:8px auto"></div></div>
+      <div class="res"><div class="ph2">📷</div><div class="big">—/720</div><div class="sk s" style="margin:8px auto"></div></div>
+    </div></div>
+    <p class="rev-note">Real reviews from Ma'am's students and parents are being added here.</p>
+  </div>
+</section>
+
+<!-- ================= MEET YOUR MENTOR ================= -->
+<section class="mentor" id="mentor">
+  <div class="wrap mentor-grid">
+    <div class="flip rv" id="flip" tabindex="0" aria-label="Flip card about Meenakshi Ma'am">
+      <div class="flip-in">
+        <div class="face f"><img src="meenakshi.jpg" alt="Meenakshi Ma'am"><div class="nm"><div><b>Meenakshi Ma'am</b><small>NEET Mentor</small></div><span>Flip me ↻</span></div></div>
+        <div class="face b">
+          <span class="tg">MEET YOUR MENTOR</span>
+          <h3>Meenakshi Ma'am</h3>
+          <p>For 7 years she has guided NEET aspirants through study plans, doubts, bad test days and big comebacks. NCERT-first, personal, and always in touch with parents.</p>
+          <div class="sp"><b>SUPERPOWER</b>Making NCERT feel like a story you actually want to read.</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <span class="eyebrow rv">Meet your mentor</span>
+      <h2 class="h2 rv">Not just a teacher.<br><span class="mark">Your NEET mentor.</span></h2>
+      <p class="sub rv">Coaching gives you lectures. What most students are missing is someone who knows them personally: what they're weak at, how they're feeling, and what to do next. Hover (or tap) the card to know her.</p>
+      <div class="facts rv">
+        <div class="fact"><i>🗓️</i>7 years guiding NEET students</div>
+        <div class="fact"><i>📞</i>1:1 calls, never a crowd</div>
+        <div class="fact"><i>📖</i>NCERT-first, always</div>
+        <div class="fact"><i>👨‍👩‍👧</i>Weekly updates to parents</div>
+      </div>
+      <p class="quote rv">"Every NEET aspirant deserves someone in their corner." — Ma'am</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PARENTS ================= -->
+<section class="parents" id="parents">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow rv">For parents</span>
+      <h2 class="h2 rv">Parents, you're part of <span class="mark">the team.</span></h2>
+      <p class="sub rv">We know NEET is a family journey. Here's what you can count on.</p>
+    </div>
+    <div class="pgrid">
+      <div class="pc rv"><div class="ic">📩</div><h3>Weekly progress updates</h3><p>Every week, Ma'am updates you on how your child is doing: what's improving and what needs work.</p></div>
+      <div class="pc rv"><div class="ic">☎️</div><h3>Talk to Ma'am directly</h3><p>Call or WhatsApp her before joining. Ask anything. No sales team in between.</p></div>
+      <div class="pc rv"><div class="ic">🏫</div><h3>Works with coaching</h3><p>No need to change coaching or school. This adds personal guidance on top of it.</p></div>
+      <div class="pc rv"><div class="ic">💰</div><h3>One clear fee</h3><p>₹9,000 for the full year, with everything included. No hidden charges, ever.</p></div>
+    </div>
+    <div class="pbar rv">
+      <div><h3>Have questions as a parent?</h3><p>Speak to Meenakshi Ma'am directly: <b style="color:var(--y)">96062 53579</b></p></div>
+      <div class="acts">
+        <a class="btn btn-y" href="tel:+919606253579">📞 Call Ma'am</a>
+        <a class="btn btn-g wa-parent" href="#" target="_blank" rel="noopener"><svg width="20" height="20"><use href="#wa"/></svg> WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRICE ================= -->
+<section class="price" id="price">
+  <div class="wrap center">
+    <span class="eyebrow dk rv">One simple plan</span>
+    <h2 class="h2 rv">Everything inside. One price.</h2>
+    <div class="price-card rv" style="text-align:left">
+      <div class="pl"><span class="tg">FULL-YEAR PROGRAM</span><div class="amt">₹9,000<small> /year</small></div><p>Personal guidance till your NEET exam, plus all the study material.</p>
+        <a class="btn btn-y wa-link" href="#" target="_blank" rel="noopener">Join on WhatsApp <span class="arr">→</span></a></div>
+      <div class="pr"><ul>
+        <li>1:1 guidance calls with Ma'am till NEET day</li>
+        <li>Moral support + study guidance whenever needed</li>
+        <li>Photo Notes with real NCERT diagrams</li>
+        <li>Mind Maps for all 4 subjects</li>
+        <li>Chapter-wise NCERT + NEET PYQ question bank</li>
+        <li>Line-by-line worksheets for Botany and Zoology</li>
+        <li>Full syllabus plan + weekly parent updates</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section id="faq">
+  <div class="wrap center">
+    <span class="eyebrow rv">Need help?</span>
+    <h2 class="h2 rv">Questions? We've got answers.</h2>
+    <div class="faq" style="text-align:left">
+      <details class="rv"><summary>How does the personal guidance work?</summary><div class="ans">You talk to Meenakshi Ma'am on calls. She makes your study plan, checks your progress, analyses your tests and helps with whatever is blocking you, whether that's a tough chapter or a tough week.</div></details>
+      <details class="rv"><summary>I already go to coaching. Do I still need this?</summary><div class="ans">This is made to work alongside coaching. Coaching teaches the syllabus; NEET Guidance gives you direction, revision material and someone who tracks you personally.</div></details>
+      <details class="rv"><summary>Who is this for?</summary><div class="ans">Every NEET aspirant: Class 11, Class 12 and droppers. Guidance continues until your NEET exam.</div></details>
+      <details class="rv"><summary>What study material do I get?</summary><div class="ans">Photo Notes, Mind Maps for Physics, Chemistry, Botany and Zoology, the chapter-wise NCERT + NEET PYQ question bank, line-by-line Biology worksheets and a full syllabus plan.</div></details>
+      <details class="rv"><summary>How will my parents know my progress?</summary><div class="ans">Ma'am sends parents an update every week. Parents can also call or WhatsApp her directly anytime.</div></details>
+      <details class="rv"><summary>How much does it cost?</summary><div class="ans">₹9,000 for the full year, with everything included and no hidden charges.</div></details>
+      <details class="rv"><summary>How do I join?</summary><div class="ans">Book your first call above, or message <b>96062 53579</b> on WhatsApp. Ma'am will reply and take it from there.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section class="final">
+  <div class="wrap">
+    <div class="launch" id="launch">
+      <div class="sky" id="sky"></div><span class="cell c1"></span><span class="cell c2"></span>
+      <div class="mini-helix" id="miniHelix"></div>
+      <h2>Ready to start preparing<br>with Ma'am?</h2>
+      <p>One message is all it takes. Let's build your NEET plan together, starting today.</p>
+      <a class="btn btn-y wa-link" id="go" href="#" target="_blank" rel="noopener">Start my NEET journey <span class="arr">→</span></a>
+      <div class="count" id="count"></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap ft">
+    <div><b style="color:var(--ink);font-family:'Bricolage Grotesque';font-size:18px">NEET Guidance</b> by Meenakshi Ma'am<br>WhatsApp / call: <b style="color:var(--ink)">96062 53579</b></div>
+    <div class="links"><a href="#notes">Study material</a><a href="#how">How it works</a><a href="#parents">Parents</a><a href="#faq">FAQs</a><a href="#book">Book a call</a></div>
+    <div>© <span id="yr"></span> NEET Guidance</div>
+  </div>
+</footer>
+
+<a class="wa-float wa-link" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg width="32" height="32" style="color:#fff"><use href="#wa"/></svg></a>
+<div class="toast" id="toast" role="status"><span class="ti" id="tIc">📞</span><div><b id="tB"></b><small id="tS"></small></div><button class="x" id="tX" aria-label="Close">✕</button></div>
+
+<script>
+(function(){
+var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+var NUM = "919606253579";
+function waURL(t){ return "https://wa.me/"+NUM+"?text="+encodeURIComponent(t); }
+var WA_DEF = waURL("Hi Ma'am, I want to know more about NEET Guidance 🙏");
+document.querySelectorAll('.wa-link').forEach(function(a){ a.href = WA_DEF; });
+document.querySelectorAll('.wa-parent').forEach(function(a){ a.href = waURL("Hello Ma'am, I'm a parent of a NEET aspirant and would like to know more about NEET Guidance."); });
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+/* ---------- reveal ---------- */
+var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }); },{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el,i){ el.style.transitionDelay=(i%4)*70+'ms'; io.observe(el); });
+
+/* ---------- ribbons ---------- */
+var r1=["Photo Notes","Mind Maps","NCERT + PYQ Bank","1:1 Calls","Moral Support","Weekly Parent Updates","Line-by-line Worksheets"];
+var r2=["Physics","Chemistry","Botany","Zoology","NCERT first","Class 11","Class 12","Droppers","Hindi + English"];
+function fill(id,arr,st){ var h=arr.map(function(t){return '<span>'+t+'</span><span class="st">'+st+'</span>';}).join(''); document.getElementById(id).innerHTML=h+h; }
+fill('rib1',r1,'✦'); fill('rib2',r2,'🧬');
+
+/* ---------- DNA helix builder ---------- */
+function Helix(el, n, amp){
+  var rungs=[];
+  for(var i=0;i<n;i++){
+    var r=document.createElement('div'); r.className='rung';
+    r.style.left=(4+i*(92/(n-1)))+'%';
+    r.innerHTML='<span class="bar"></span><span class="n a"></span><span class="n b"></span>';
+    el.appendChild(r); rungs.push({el:r,a:r.children[1],b:r.children[2],bar:r.children[0]});
+  }
+  this.rungs=rungs; this.el=el; this.amp=amp; this.speed=1; this.t=0; this.vis=n;
+}
+Helix.prototype.frame=function(dt){
+  this.t+=dt*0.0024*this.speed;
+  var H=this.el.clientHeight, mid=H/2, A=Math.min(this.amp, H*0.42), self=this;
+  this.rungs.forEach(function(r,i){
+    var ph=self.t+i*0.55, s=Math.sin(ph), c=Math.cos(ph);
+    var ya=mid+s*A, yb=mid-s*A, sz=r.a.offsetWidth||26;
+    var sa=0.72+0.28*(c+1)/2, sb=0.72+0.28*(1-c)/2;
+    r.a.style.transform='translateY('+(ya-sz/2)+'px) scale('+sa+')';
+    r.b.style.transform='translateY('+(yb-sz/2)+'px) scale('+sb+')';
+    r.a.style.zIndex=c>0?3:1; r.b.style.zIndex=c>0?1:3;
+    r.bar.style.top=Math.min(ya,yb)+'px'; r.bar.style.height=Math.abs(ya-yb)+'px';
+    r.bar.style.opacity=0.35+0.65*Math.abs(c);
+    var show = i < self.vis;
+    r.el.style.opacity = show?1:0;
+  });
+};
+var stage=document.getElementById('dna');
+var hx=new Helix(document.getElementById('helix'),14,62);
+var mini=new Helix(document.getElementById('miniHelix'),10,40);
+mini.rungs.forEach(function(r){ r.el.classList.add('on'); });
+var last=performance.now();
+function tick(now){
+  var dt=Math.min(50,now-last); last=now;
+  if(!reduce){ hx.frame(dt); mini.frame(dt); }
+  requestAnimationFrame(tick);
+}
+hx.frame(0); mini.frame(0); requestAnimationFrame(tick);
+
+/* ---------- hero story loop ---------- */
+var chips=[].slice.call(stage.querySelectorAll('.chip'));
+var tEl=document.getElementById('dnaT'), fEl=document.getElementById('dnaF'), pEl=document.getElementById('dnaP');
+var AVG='Average NEET Aspirant 😐', PRO='NEET-Ready Aspirant 🩺✨';
+var cols=['#F5C518','#111111','#FFE58A','#25D366'], run=0;
+function wait(ms){ return new Promise(function(r){ setTimeout(r,ms); }); }
+function charge(c){ fEl.style.width=(c*100)+'%'; pEl.textContent=Math.round(c*100)+'%';
+  var k=Math.round(c*hx.rungs.length); hx.rungs.forEach(function(r,i){ r.el.classList.toggle('on', i<k); }); }
+function center(){ var s=stage.getBoundingClientRect(), h=document.getElementById('helix').getBoundingClientRect(); return {x:h.left-s.left+h.width/2, y:h.top-s.top+h.height/2}; }
+function burst(){ var p=center(); for(var i=0;i<10;i++){ var a=Math.PI*2*i/10+Math.random()*.4, rr=40+Math.random()*40, d=document.createElement('i'); d.className='fx';
+  d.style.cssText='left:'+(p.x-4)+'px;top:'+(p.y-4)+'px;width:8px;height:8px;background:'+cols[i%4]+';border:1px solid #111';
+  stage.appendChild(d);
+  d.animate([{transform:'translate(0,0)',opacity:1},{transform:'translate('+Math.cos(a)*rr+'px,'+Math.sin(a)*rr+'px) scale(.2)',opacity:0}],{duration:520,easing:'ease-out',fill:'forwards'}).finished.then(function(){},function(){}).then((function(x){return function(){x.remove();};})(d)); } }
+function reset(){ charge(0); tEl.textContent=AVG; stage.classList.remove('pro','strike'); hx.speed=1;
+  chips.forEach(function(c){ c.getAnimations().forEach(function(a){a.cancel();}); }); }
+async function loop(){
+  var id=++run; function ok(){ return id===run; }
+  reset();
+  // 1. helix zips in
+  hx.vis=0; for(var i=1;i<=hx.rungs.length;i++){ hx.vis=i; await wait(55); if(!ok())return; }
+  await wait(250);
+  // 2. study tools pop in
+  chips.forEach(function(c,i){ c.animate([{opacity:0,transform:'scale(.4)'},{opacity:1,transform:'scale(1.1)'},{opacity:1,transform:'scale(1)'}],{duration:300,delay:i*80,easing:'ease-out',fill:'forwards'}); });
+  await wait(1300); if(!ok())return;
+  // 3. each tool flies into the DNA and charges it
+  var n=0;
+  for(var j=0;j<chips.length;j++){
+    var c=chips[j], s=stage.getBoundingClientRect(), b=c.getBoundingClientRect(), p=center();
+    var dx=p.x-(b.left-s.left+b.width/2), dy=p.y-(b.top-s.top+b.height/2);
+    c.getAnimations().forEach(function(a){a.cancel();});
+    await c.animate([{opacity:1,transform:'translate(0,0) scale(1)'},{opacity:0,transform:'translate('+dx+'px,'+dy+'px) scale(.15)'}],{duration:380,easing:'cubic-bezier(.55,0,.8,.2)',fill:'forwards'}).finished.catch(function(){});
+    if(!ok())return; n++; charge(n/chips.length); burst(); hx.speed=1+n*.35; await wait(90);
+  }
+  // 4. upgrade the label
+  stage.classList.add('strike'); await wait(380); if(!ok())return;
+  tEl.textContent=PRO; stage.classList.remove('strike'); stage.classList.add('pro'); hx.speed=3.2; burst();
+  await wait(3200); if(!ok())return;
+  hx.speed=1; await wait(300);
+  loop();
+}
+if(reduce){ hx.vis=hx.rungs.length; charge(1); tEl.textContent=PRO; stage.classList.add('pro'); }
+else {
+  var started=false;
+  new IntersectionObserver(function(es){ if(es[0].isIntersecting && !started){ started=true; loop(); } },{threshold:.2}).observe(stage);
+}
+
+/* ---------- notes coverflow ---------- */
+var cf=document.getElementById('cf'), cards=[].slice.call(cf.children), dots=document.getElementById('dots'), cur=0, paused=false, pT;
+cards.forEach(function(_,i){ var b=document.createElement('button'); b.setAttribute('aria-label','Card '+(i+1)); b.onclick=function(){go(i);hold();}; dots.appendChild(b); });
+function go(i){ i=(i+cards.length)%cards.length; var c=cards[i]; cf.scrollTo({left:c.offsetLeft-(cf.clientWidth-c.offsetWidth)/2,behavior:'smooth'}); }
+function paint(){ var mid=cf.scrollLeft+cf.clientWidth/2, best=0, bd=1e9;
+  cards.forEach(function(c,i){ var d=(c.offsetLeft+c.offsetWidth/2-mid)/(c.offsetWidth+26), a=Math.min(Math.abs(d),2);
+    if(Math.abs(d)<bd){bd=Math.abs(d);best=i;}
+    if(!reduce) c.style.transform='perspective(1000px) rotateY('+(Math.max(-2,Math.min(2,d))*-22)+'deg) scale('+(1-a*.1)+')';
+    c.style.opacity=1-a*.25; });
+  cur=best; [].forEach.call(dots.children,function(b,i){ b.classList.toggle('on',i===best); }); }
+var raf=0; cf.addEventListener('scroll',function(){ if(!raf) raf=requestAnimationFrame(function(){raf=0;paint();}); },{passive:true});
+window.addEventListener('resize',paint);
+function hold(){ paused=true; clearTimeout(pT); pT=setTimeout(function(){paused=false;},7000); }
+['pointerdown','touchstart','wheel'].forEach(function(ev){ cf.addEventListener(ev,hold,{passive:true}); });
+cf.addEventListener('mouseenter',function(){paused=true;}); cf.addEventListener('mouseleave',function(){paused=false;});
+document.getElementById('cfPrev').onclick=function(){go(cur-1);hold();};
+document.getElementById('cfNext').onclick=function(){go(cur+1);hold();};
+setTimeout(function(){ var c=cards[1]; cf.scrollLeft=c.offsetLeft-(cf.clientWidth-c.offsetWidth)/2; paint(); },80);
+paint();
+if(!reduce) setInterval(function(){ if(!paused && !document.hidden) go(cur+1); },3500);
+
+/* ---------- 10-second check ---------- */
+var R={
+  plan:{t:"You need a plan, not more hours.",p:"Ma'am builds a personal study plan around your syllabus, coaching timetable and weak chapters, then checks in so you actually follow it.",f:["Personal study plan","Full syllabus map","Regular check-in calls"]},
+  forget:{t:"You need smarter revision.",p:"Mind Maps put a whole chapter on one page, and Photo Notes make diagrams stick. You revise in minutes, not hours.",f:["Mind Maps","Photo Notes","Revision schedule"]},
+  bio:{t:"You need NCERT, line by line.",p:"The Botany and Zoology line-by-line worksheets plus the chapter-wise NCERT + PYQ bank turn NCERT into marks. 360/360 is the aim.",f:["Line-by-line worksheets","NCERT + PYQ bank","Photo Notes"]},
+  mock:{t:"You need test analysis.",p:"Ma'am goes through your mock tests with you, finds where marks are leaking, and gives you exactly what to fix next, with PYQs to practise.",f:["1:1 test analysis","PYQ practice","Weak-chapter plan"]},
+  mood:{t:"You need someone in your corner.",p:"This is the heart of the program. Talk to Ma'am on call when it gets heavy. Moral support is part of the plan, not an extra.",f:["1:1 calls","Moral support","Weekly parent updates"]}
+};
+var qres=document.getElementById('qres');
+document.querySelectorAll('.qo').forEach(function(b){ b.addEventListener('click',function(){
+  document.querySelectorAll('.qo').forEach(function(x){x.classList.remove('on');}); b.classList.add('on');
+  var r=R[b.dataset.k];
+  qres.classList.remove('show'); void qres.offsetWidth;
+  qres.innerHTML='<span class="tg">YOUR FIX ✓</span><h3>'+r.t+'</h3><p>'+r.p+'</p><div class="fx2">'+r.f.map(function(x){return '<span>'+x+'</span>';}).join('')+'</div><a class="btn btn-y" href="#book">Book my first call <span class="arr">→</span></a>';
+  qres.classList.add('show');
+  if(window.innerWidth<900) qres.scrollIntoView({behavior:'smooth',block:'nearest'});
+}); });
+
+/* ---------- compare toggle ---------- */
+var ALONE=["Studying hard without knowing if it's the right stuff","Searching YouTube and random PDFs for what to read","Same weak chapters, same mistakes in every mock","Low days hit hard, and you handle them alone","Parents don't know how you're really doing"];
+var WITH=["A personal plan, reviewed with Ma'am on calls","Photo Notes, Mind Maps and PYQs, all in one place","Test analysis shows exactly what to fix next","Moral support from someone who truly gets NEET","Weekly updates keep parents calm and in the loop"];
+var tg=document.getElementById('tg'), cmp=document.getElementById('cmp'), list=document.getElementById('clist');
+function setMode(m){
+  list.innerHTML=(m?WITH:ALONE).map(function(t){return '<li><span class="ic">'+(m?'✓':'✕')+'</span><span>'+t+'</span></li>';}).join('');
+  tg.classList.toggle('m',!!m);
+  tg.querySelectorAll('button').forEach(function(b){ b.classList.toggle('act',+b.dataset.m===m); });
+  cmp.classList.toggle('good',!!m);
+  document.getElementById('brain').classList.toggle('good',!!m);
+  var e=document.getElementById('emo'); e.textContent=m?'🤩':'😵‍💫'; e.style.transform=m?'scale(1.15) rotate(-8deg)':'none';
+  var bm=document.getElementById('bmeter'); bm.style.width=m?'100%':'18%'; bm.style.background=m?'#F5C518':'#EF4444';
+  document.getElementById('btxt').textContent=m?'NEET mode: ON ⚡':'Brain: buffering…';
+  document.getElementById('cmpH').innerHTML=m?'Your brain <span class="mark">with Ma\'am.</span>':'Your brain on <span class="mark">solo prep.</span>';
+}
+tg.querySelectorAll('button').forEach(function(b){ b.onclick=function(){ setMode(+b.dataset.m); }; });
+setMode(0);
+// gentle auto-flip once when it comes into view
+var flipped=false;
+new IntersectionObserver(function(es){ if(es[0].isIntersecting && !flipped){ flipped=true; setTimeout(function(){ setMode(1); },1800); } },{threshold:.5}).observe(cmp);
+
+/* ---------- levels rail (phones) ---------- */
+var lv=document.getElementById('levels'), rf=document.getElementById('rf'), rk=document.getElementById('rk'), lvls=[].slice.call(lv.querySelectorAll('.lvl'));
+function rail(){ if(rf.parentNode.offsetParent===null) return;
+  var r=lv.getBoundingClientRect(), vh=window.innerHeight, H=rf.parentNode.offsetHeight;
+  var p=Math.max(0,Math.min(1,(vh*0.62-r.top)/H)), h=p*H; rf.style.height=h+'px'; rk.style.top=h+'px';
+  lvls.forEach(function(l){ l.classList.toggle('lit', l.offsetTop+20<=h+30); }); }
+var rr=0; window.addEventListener('scroll',function(){ if(!rr) rr=requestAnimationFrame(function(){rr=0;rail();}); },{passive:true});
+window.addEventListener('resize',rail); rail();
+
+/* ---------- chat pop-in ---------- */
+function popChat(box,typing){
+  var msgs=box.querySelectorAll(':scope > .msg');
+  msgs.forEach(function(m){ m.classList.remove('show'); });
+  msgs.forEach(function(m,i){ setTimeout(function(){
+    if(typing && m.classList.contains('her')){ typing.classList.add('show'); box.insertBefore(typing,m); setTimeout(function(){ typing.classList.remove('show'); m.classList.add('show'); },650); }
+    else m.classList.add('show');
+  }, 400+i*1100); });
+}
+var chat=document.getElementById('chat'), typing=document.getElementById('typing'), chatDone=false;
+new IntersectionObserver(function(es){ if(es[0].isIntersecting && !chatDone){ chatDone=true; popChat(chat,typing); } },{threshold:.35}).observe(chat);
+
+/* ---------- book form -> WhatsApp ---------- */
+document.getElementById('bookForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  var name=document.getElementById('fName').value.trim(), who=document.getElementById('fWho').value, cls=document.getElementById('fClass').value, tm=document.getElementById('fTime').value, w=document.getElementById('fWorry').value.trim();
+  var msg = who==='Parent'
+    ? "Hello Ma'am, I'm "+name+", parent of a NEET aspirant ("+cls+"). I'd like to book a first call. Best time: "+tm+"."+(w?" Main concern: "+w+".":"")
+    : "Hi Ma'am, I'm "+name+" ("+cls+"). I'd like to book my first call. Best time: "+tm+"."+(w?" My biggest worry: "+w+".":"");
+  window.open(waURL(msg),'_blank') || (location.href=waURL(msg));
+});
+
+/* ---------- review tabs ---------- */
+document.querySelectorAll('.tab').forEach(function(t){ t.onclick=function(){
+  document.querySelectorAll('.tab').forEach(function(x){x.classList.remove('on');}); t.classList.add('on');
+  document.querySelectorAll('.tabpane').forEach(function(p){p.classList.remove('on');});
+  var pane=document.getElementById(t.dataset.t); pane.classList.add('on');
+  if(t.dataset.t==='t3') pane.querySelectorAll('.ph-body').forEach(function(b){ popChat(b,null); });
+}; });
+
+/* ---------- flip card ---------- */
+var flip=document.getElementById('flip');
+flip.addEventListener('click',function(){ flip.classList.toggle('on'); });
+flip.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); flip.classList.toggle('on'); } });
+
+/* ---------- toasts (program facts) ---------- */
+var T=[["📞","Parents can call Ma'am directly","before joining, ask anything"],["🧠","Mind Maps for all 4 subjects","included in the program"],["💛","Moral support is part of the plan","not an extra"],["📩","Weekly updates to parents","every single week"],["🎯","Biology worksheets aim for 360/360","line by line from NCERT"]];
+var toast=document.getElementById('toast'), ti=0, tOff=false;
+function showToast(){ if(tOff) return; var x=T[ti++%T.length]; document.getElementById('tIc').textContent=x[0]; document.getElementById('tB').textContent=x[1]; document.getElementById('tS').textContent=x[2];
+  toast.classList.add('show'); setTimeout(function(){ toast.classList.remove('show'); },5200); }
+document.getElementById('tX').onclick=function(){ tOff=true; toast.classList.remove('show'); };
+if(!reduce){ setTimeout(showToast,6000); setInterval(showToast,16000); }
+
+/* ---------- final CTA: helix launch ---------- */
+var sky=document.getElementById('sky');
+for(var k=0;k<44;k++){ var s=document.createElement('i'); s.style.left=Math.random()*100+'%'; s.style.top=Math.random()*100+'%'; s.style.animationDelay=(-Math.random()*3)+'s'; sky.appendChild(s); }
+var goBtn=document.getElementById('go'), launch=document.getElementById('launch'), count=document.getElementById('count');
+goBtn.addEventListener('click',function(e){
+  if(reduce) return;
+  e.preventDefault(); var href=goBtn.href, n=3, win=null;
+  count.textContent='Unzipping in 3…'; mini.speed=3;
+  var iv=setInterval(function(){ n--; if(n>0){ count.textContent='Unzipping in '+n+'…'; mini.speed+=2; }
+    else { clearInterval(iv); count.textContent="Let's go! 🎉"; launch.classList.add('go'); mini.speed=10;
+      setTimeout(function(){ window.open(href,'_blank') || (location.href=href); setTimeout(function(){ launch.classList.remove('go'); mini.speed=1; count.textContent=''; },1500); },1000); } },550);
+});
+})();
+</script>
+</body>
+</html>
