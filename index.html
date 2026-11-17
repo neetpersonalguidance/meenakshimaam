@@ -7,7 +7,7 @@
 <meta name="theme-color" content="#F5C518">
 <meta name="format-detection" content="telephone=no">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%23F5C518%22/%3E%3Ctext x=%2250%22 y=%2270%22 font-size=%2260%22 text-anchor=%22middle%22%3E%F0%9F%A7%AC%3C/text%3E%3C/svg%3E">
-<meta name="description" content="1:1 NEET guidance calls with Meenakshi Ma'am till exam day, plus Photo Notes, Mind Maps, the NCERT + PYQ question bank and line-by-line worksheets. ₹9,000 for the full year.">
+<meta name="description" content="1:1 NEET guidance with Meenakshi Ma'am till exam day, plus a complete library for Physics, Chemistry, Botany and Zoology: Photo Notes, Story Notes, Mind Maps, 7,900 MCQs and line-by-line NCERT worksheets. ₹9,000 for the full year.">
 <script>(function(){try{var t=localStorage.getItem('ng-theme');}catch(e){}if(!t){t=(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',t);})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -500,6 +500,84 @@ input,select{-webkit-appearance:none;appearance:none}
 }
 
 
+
+/* =================== LIBRARY / STUDY MATERIAL =================== */
+.lib-hero{margin-top:34px;display:grid;grid-template-columns:1.35fr 1fr;gap:26px;align-items:center;background:var(--soft);border:2px solid var(--bd);border-radius:30px;padding:26px;box-shadow:var(--sh2);position:relative;overflow:hidden}
+.lib-hero:before{content:"";position:absolute;inset:-40% -10% auto auto;width:60%;height:120%;background:radial-gradient(closest-side,rgba(245,197,24,.45),transparent);pointer-events:none}
+.lib-img{position:relative}
+.lib-img img{width:100%;height:auto;animation:float 6s ease-in-out infinite;filter:drop-shadow(0 18px 24px rgba(0,0,0,.18))}
+@keyframes float{50%{transform:translateY(-10px) rotate(-.6deg)}}
+.lib-stats{display:grid;gap:10px;position:relative}
+.lib-stats div{display:flex;align-items:center;gap:14px;background:var(--card);border:2px solid var(--bd);border-radius:16px;padding:10px 14px}
+.lib-stats div:nth-child(1){background:var(--ink);color:#fff;border-color:var(--ink)}
+.lib-stats div:nth-child(1) b{color:var(--y)}
+.lib-stats b{font-family:"Bricolage Grotesque";font-size:30px;line-height:1;min-width:104px}
+.lib-stats span{font-size:14px;font-weight:500;line-height:1.35}
+.mini-h{font-size:clamp(26px,3.6vw,38px);margin:56px 0 0}
+.art.real{background:#f3f0e6;padding:0}
+.art.real img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;transition:transform .5s}
+.nc:hover .art.real img{transform:scale(1.04)}
+@media(max-width:900px){.lib-hero{grid-template-columns:1fr;padding:18px}.lib-stats b{font-size:26px;min-width:90px}}
+
+.stabs{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.stab{border:2px solid var(--bd);background:var(--card);color:var(--fg);border-radius:99px;padding:11px 20px;font-weight:700;font-size:15px;box-shadow:0 3px 0 var(--shc);position:relative;transition:background .2s,color .2s}
+.stab.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.stab.on:after{content:"";position:absolute;left:50%;bottom:-11px;width:10px;height:10px;border-radius:50%;background:var(--sc);transform:translateX(-50%);box-shadow:0 0 0 3px var(--page)}
+.spanel{margin-top:26px;border:2.5px solid var(--bd);border-radius:30px;background:var(--card);box-shadow:var(--sh2);overflow:hidden;--sc:#3B82F6}
+.sp-top{display:grid;grid-template-columns:1fr 1.05fr;gap:10px;align-items:center;padding:26px 26px 6px;position:relative}
+.sp-top:before{content:"";position:absolute;left:-10%;top:-30%;width:70%;height:140%;background:radial-gradient(closest-side,color-mix(in srgb,var(--sc) 28%,transparent),transparent);pointer-events:none}
+.sp-img{position:relative}
+.sp-img img{width:100%;height:auto;filter:drop-shadow(0 16px 20px rgba(0,0,0,.2));animation:popin .5s cubic-bezier(.2,1.3,.4,1)}
+.sp-list{display:grid;gap:10px;position:relative}
+.sp-list h4{font-size:26px;margin-bottom:4px}
+.sp-list h4 small{display:block;font-family:Inter;font-size:14px;font-weight:600;color:var(--mute);letter-spacing:0;margin-top:4px}
+.sp-item{display:grid;grid-template-columns:44px 1fr;gap:12px;align-items:start;border:1.5px solid var(--line);border-radius:16px;padding:11px 13px;background:var(--page);animation:slide .4s both}
+.sp-item:nth-child(3){animation-delay:.05s}.sp-item:nth-child(4){animation-delay:.1s}.sp-item:nth-child(5){animation-delay:.15s}.sp-item:nth-child(6){animation-delay:.2s}.sp-item:nth-child(7){animation-delay:.25s}
+.sp-item i{font-style:normal;width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:21px;background:var(--y);border:2px solid var(--ink)}
+.sp-item b{display:block;font-size:16px}
+.sp-item .nums{display:flex;flex-wrap:wrap;gap:6px;margin:5px 0 4px}
+.sp-item .nums span{font-size:11.5px;font-weight:700;padding:3px 8px;border-radius:99px;background:var(--ink);color:var(--y)}
+.sp-item p{font-size:13.5px;color:var(--mute)}
+.peek{padding:20px 26px 26px;border-top:2px dashed var(--line);margin-top:18px}
+.peek-h{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.peek-h b{font-size:17px}
+.peek-h small{color:var(--mute);font-size:13px}
+.peek-row{display:flex;gap:16px;overflow-x:auto;padding:6px 4px 14px;scroll-snap-type:x mandatory;scrollbar-width:thin}
+.pk{flex:0 0 168px;scroll-snap-align:start;border:2px solid var(--bd);border-radius:14px;overflow:hidden;background:#fff;box-shadow:var(--sh);cursor:zoom-in;position:relative;padding:0;text-align:left;transition:transform .2s}
+.pk:hover{transform:translateY(-4px) rotate(-1deg)}
+.pk img{width:100%;height:210px;object-fit:cover;object-position:top;display:block}
+.pk span{position:absolute;left:8px;bottom:8px;right:8px;background:var(--ink);color:var(--y);font-size:11.5px;font-weight:700;border-radius:8px;padding:5px 8px}
+@media(max-width:900px){.sp-top{grid-template-columns:1fr;padding:18px 16px 4px}.peek{padding:16px}.sp-list h4{font-size:22px}}
+
+.loop{margin-top:56px;background:var(--ink);color:#fff;border-radius:28px;padding:28px;display:grid;grid-template-columns:.8fr 1.6fr;gap:24px;align-items:center;border:2px solid var(--ink);box-shadow:6px 6px 0 var(--y)}
+.loop-h h3{font-size:30px;margin:12px 0 6px;color:#fff}
+.loop-h p{color:#bbb;font-size:15px}
+.loop-steps{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;position:relative}
+.loop-steps div{background:#1c1c1c;border:1.5px solid #333;border-radius:16px;padding:14px 8px;text-align:center;position:relative}
+.loop-steps div:not(:last-child):after{content:"→";position:absolute;right:-10px;top:50%;transform:translateY(-50%);color:var(--y);font-weight:800;z-index:2}
+.loop-steps i{font-style:normal;font-size:24px;display:block}
+.loop-steps b{display:block;font-size:14px;margin-top:6px;color:var(--y)}
+.loop-steps span{font-size:12px;color:#ccc}
+.loop-steps .me{background:var(--y);border-color:var(--y)}.loop-steps .me b,.loop-steps .me span{color:var(--ink)}
+@media(max-width:980px){.loop{grid-template-columns:1fr}.loop-steps{grid-template-columns:repeat(3,1fr)}.loop-steps div:nth-child(3):after{display:none}}
+
+.lb{position:fixed;inset:0;z-index:200;background:rgba(10,10,8,.78);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:16px}
+.lb.open{display:flex;animation:popin .3s ease}
+.lb-card{background:var(--card);border:2.5px solid var(--bd);border-radius:24px;padding:14px;width:min(460px,100%);max-height:calc(100vh - 32px);overflow:auto;position:relative;box-shadow:8px 8px 0 var(--y)}
+.lb-x{position:absolute;right:10px;top:10px;z-index:3;width:38px;height:38px;border-radius:50%;border:2px solid var(--ink);background:#fff;font-weight:800}
+.lb-img{position:relative;border-radius:14px;overflow:hidden;border:2px solid var(--bd);background:#fff}
+.lb-img img{width:100%;display:block;-webkit-user-select:none;user-select:none;-webkit-user-drag:none;pointer-events:none}
+.lb-img .lock{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);background:var(--ink);color:var(--y);font-weight:700;font-size:13.5px;padding:9px 14px;border-radius:99px;white-space:nowrap;box-shadow:0 6px 20px rgba(0,0,0,.3)}
+.lb-bar{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:12px 0}
+.lb-bar b{font-size:15px}
+.lb-nav{display:flex;gap:8px}
+.lb-nav button{width:40px;height:40px;border-radius:12px;border:2px solid var(--bd);background:var(--card);color:var(--fg);font-weight:800;box-shadow:0 3px 0 var(--shc)}
+[data-theme="dark"] .lib-stats div:nth-child(1){background:#000;border-color:var(--y)}
+[data-theme="dark"] .sp-item i{border-color:var(--ink);color:var(--ink)}
+[data-theme="dark"] .stab.on{background:var(--y);color:var(--ink);border-color:var(--y)}
+[data-theme="dark"] .loop{background:#000;border-color:var(--y)}
+[data-theme="dark"] .lib-img img,[data-theme="dark"] .sp-img img{filter:drop-shadow(0 18px 24px rgba(0,0,0,.6)) brightness(.95)}
+
 /* =================== THEME TOGGLE =================== */
 .theme-btn{width:44px;height:44px;flex:none;border-radius:14px;border:2px solid var(--bd);background:var(--card);color:var(--fg);box-shadow:0 3px 0 var(--shc);display:grid;place-items:center;position:relative;overflow:hidden;transition:transform .15s}
 .theme-btn:active{transform:translateY(2px);box-shadow:0 1px 0 var(--shc)}
@@ -637,7 +715,7 @@ html.theming *,html.theming *:before,html.theming *:after{transition:background-
     <div>
       <span class="pill"><b>7 YEARS</b> of guiding NEET aspirants</span>
       <h1>NEET prep,<br><span class="ul">made personal.<svg viewBox="0 0 400 30" preserveAspectRatio="none"><path d="M5 22 C 90 6, 200 4, 395 16"/></svg></span><br><span class="blk">Till exam day.</span></h1>
-      <p class="lead">1:1 calls with Meenakshi Ma'am for study guidance and moral support, plus every note, mind map and PYQ you need. Built on NCERT, explained like a story.</p>
+      <p class="lead">1:1 calls with Meenakshi Ma'am for study guidance and moral support, plus a complete library for all 4 subjects: Photo Notes, Story Notes, Mind Maps and 7,900 MCQs. Built on NCERT.</p>
       <div class="hero-cta">
         <a class="btn btn-k" href="#book">📞 Book my first call <span class="arr">→</span></a>
         <a class="btn" href="#notes">See study material</a>
@@ -659,11 +737,11 @@ html.theming *,html.theming *:before,html.theming *:after{transition:background-
       <div class="helix-box"><div class="helix" id="helix"></div></div>
       <span class="chip yy" style="left:2%;top:26%">📸 Photo Notes</span>
       <span class="chip" style="left:60%;top:22%">🧠 Mind Maps</span>
-      <span class="chip k" style="left:4%;top:62%">📚 PYQ Bank</span>
+      <span class="chip k" style="left:4%;top:62%">📝 7,900 MCQs</span>
       <span class="chip" style="left:30%;top:80%">✍️ NCERT Worksheets</span>
       <span class="chip yy" style="left:66%;top:72%">📞 1:1 Calls</span>
       <span class="chip k" style="left:40%;top:36%">💛 Moral Support</span>
-      <span class="chip" style="left:74%;top:46%">🗺️ Study Plan</span>
+      <span class="chip" style="left:74%;top:46%">📖 Story Notes</span>
       <div class="postit">P.S. Coaching teaches. Ma'am <u>guides</u>. 💛</div>
     </div>
   </div>
@@ -683,81 +761,127 @@ html.theming *,html.theming *:before,html.theming *:after{transition:background-
     <div class="stats" style="text-align:left">
       <div class="stat s-y rv"><b>7 yrs</b><span>Guiding NEET aspirants</span><small>and still picking up every call</small></div>
       <div class="stat s-k rv"><b>1 : 1</b><span>Personal calls</span><small>no crowded batch, no being "roll no. 147"</small></div>
-      <div class="stat s-w rv"><b>4</b><span>Subjects covered</span><small>Physics, Chemistry, Botany, Zoology</small></div>
+      <div class="stat s-w rv"><b>7,900</b><span>NEET-pattern MCQs</span><small>812 tagged with real NEET PYQs</small></div>
       <div class="stat s-l rv"><b>Weekly</b><span>Parent updates</span><small>because parents worry too 💛</small></div>
     </div>
   </div>
 </section>
 
-<!-- ================= NOTES ================= -->
+<!-- ================= STUDY MATERIAL ================= -->
 <section class="notes" id="notes">
   <div class="wrap">
     <div class="notes-head">
       <div>
-        <span class="eyebrow rv">Study material that actually helps 📚</span>
-        <h2 class="h2 rv">Notes that <span class="mark">stick.</span></h2>
-        <p class="sub rv">Short, visual and built line by line from NCERT. Swipe through to see what each one does for your score.</p>
+        <span class="eyebrow rv">Study material 📚</span>
+        <h2 class="h2 rv">Your complete NEET library. <span class="mark">Ready on day one.</span></h2>
+        <p class="sub rv">Every book is built from NCERT, for all four subjects. You get the full set in your Google Drive the day you join. Here's a peek.</p>
       </div>
-      <a href="#book" class="btn rv">Get all of it →</a>
+    </div>
+
+    <div class="lib-hero rv">
+      <div class="lib-img"><img src="img/mat/bundle-all.webp" alt="Photo Notes, Mind Maps and Question Bank books for Physics, Chemistry, Botany and Zoology" loading="lazy" width="1195" height="545"></div>
+      <div class="lib-stats">
+        <div><b data-count="7900">7,900</b><span>NEET-pattern MCQs with answer keys</span></div>
+        <div><b data-count="812">812</b><span>questions tagged with real NEET PYQs (2016–2026)</span></div>
+        <div><b data-count="646">646</b><span>pages of Photo Notes with real NCERT diagrams</span></div>
+        <div><b data-count="410">410</b><span>pages of Mind Maps for quick revision</span></div>
+        <div><b data-count="7029">7,029</b><span>NCERT lines turned into Biology worksheets</span></div>
+      </div>
     </div>
   </div>
+
+  <!-- material types -->
+  <div class="wrap"><h3 class="mini-h rv">7 kinds of material. One goal: <span class="mark">NEET.</span></h3></div>
   <div class="cf-wrap">
     <button class="cf-btn cf-prev" id="cfPrev" aria-label="Previous">←</button>
     <div class="cf" id="cf">
       <article class="nc y">
-        <div class="art photo"><div class="paper">
-          <svg width="78" height="62" viewBox="0 0 78 62"><ellipse cx="39" cy="31" rx="36" ry="27" fill="#FFF7D6" stroke="#111" stroke-width="2.5"/><ellipse cx="39" cy="31" rx="13" ry="10" fill="#F5C518" stroke="#111" stroke-width="2.5"/><circle cx="16" cy="20" r="4" fill="#111"/><circle cx="60" cy="42" r="4" fill="#111"/><path d="M58 18c4 2 6 5 6 9" stroke="#111" stroke-width="2" fill="none"/></svg>
-          <div class="ln"></div><div class="ln s"></div><div class="ln"></div><div class="ln s"></div><div class="ln"></div><div class="ln s"></div>
-        </div></div>
+        <div class="art real"><img src="img/mat/art-photo.webp" alt="Zoology Photo Notes cover" loading="lazy"></div>
         <div class="bd"><span class="badge">Start here</span><h3>Photo Notes</h3>
           <div class="fxs"><b>Side effect:</b> diagrams start showing up in your dreams. Fully labelled.</div>
-          <ul><li>Real NCERT diagrams + short NCERT explanation</li><li>Revise a whole chapter in minutes</li></ul></div>
+          <ul><li>Real NCERT diagrams, each explained in short points</li><li>646 pages across 4 subjects, with recall tests</li></ul></div>
       </article>
       <article class="nc k">
-        <div class="art mm"><svg viewBox="0 0 330 190" width="100%" height="100%">
-          <g stroke="#F5C518" stroke-width="2.5" fill="none"><path d="M165 95 L70 45"/><path d="M165 95 L260 40"/><path d="M165 95 L60 145"/><path d="M165 95 L270 150"/><path d="M165 95 L165 168"/></g>
-          <rect x="115" y="75" width="100" height="40" rx="12" fill="#F5C518" stroke="#fff" stroke-width="2"/><text x="165" y="100" text-anchor="middle" font-family="Inter" font-weight="800" font-size="13" fill="#111">CHAPTER</text>
-          <g font-family="Inter" font-weight="700" font-size="11" fill="#111"><rect x="30" y="30" width="80" height="28" rx="9" fill="#fff"/><text x="70" y="48" text-anchor="middle">Concept</text><rect x="220" y="25" width="80" height="28" rx="9" fill="#fff"/><text x="260" y="43" text-anchor="middle">Formula</text><rect x="20" y="132" width="80" height="28" rx="9" fill="#fff"/><text x="60" y="150" text-anchor="middle">Diagram</text><rect x="230" y="136" width="80" height="28" rx="9" fill="#fff"/><text x="270" y="154" text-anchor="middle">PYQ tip</text></g>
-        </svg></div>
+        <div class="art real"><img src="img/mat/art-story.webp" alt="Botany Story Notes chapter opener" loading="lazy"></div>
+        <div class="bd"><span class="badge">Theory, made easy</span><h3>Story Notes</h3>
+          <div class="fxs"><b>Side effect:</b> you actually <i>want</i> to read the next chapter.</div>
+          <ul><li>Every chapter told like a story: 3-line summary, chapter map, memory tricks</li><li>One-page recap at the end of each chapter</li></ul></div>
+      </article>
+      <article class="nc">
+        <div class="art real"><img src="img/mat/art-mm.webp" alt="Botany mind map page" loading="lazy"></div>
         <div class="bd"><span class="badge">Revision hack</span><h3>Mind Maps</h3>
           <div class="fxs"><b>Side effect:</b> a whole chapter fits on one page. Your bag gets lighter.</div>
-          <ul><li>All 4 subjects: Physics, Chemistry, Botany, Zoology</li><li>Perfect for last-minute revision</li></ul></div>
-      </article>
-      <article class="nc">
-        <div class="art bank">
-          <span class="qchip" style="left:22px;top:24px;transform:rotate(-6deg)">NEET PYQ 2024</span>
-          <span class="qchip k" style="left:170px;top:30px;transform:rotate(5deg)">NCERT · L-12</span>
-          <span class="qchip w" style="left:40px;top:84px;transform:rotate(3deg)">Chapter-wise ✓</span>
-          <span class="qchip" style="left:180px;top:96px;transform:rotate(-4deg)">PYQ 2019</span>
-          <span class="qchip k" style="left:70px;top:140px;transform:rotate(-2deg)">All 4 subjects</span>
-        </div>
-        <div class="bd"><span class="badge">Most used</span><h3>NCERT + PYQ Question Bank</h3>
-          <div class="fxs"><b>Side effect:</b> NEET questions start looking… strangely familiar.</div>
-          <ul><li>Chapter-wise NCERT + NEET previous-year questions</li><li>Practise exactly what NEET asks</li></ul></div>
-      </article>
-      <article class="nc k">
-        <div class="art ws"><div class="wsheet">The <u>&nbsp;</u> is the site of photosynthesis.<br>DNA replication is <u>&nbsp;</u>.<br><span class="sc">Target: 360 / 360 🎯</span></div></div>
-        <div class="bd"><span class="badge">Biology booster</span><h3>Line-by-line Worksheets</h3>
-          <div class="fxs"><b>Side effect:</b> you start quoting NCERT lines at family dinners.</div>
-          <ul><li>Special NCERT line-by-line sheets for Botany and Zoology</li><li>Built to aim for 360/360 in Biology</li></ul></div>
+          <ul><li>410 pages: mind maps, comparison tables, step-by-step flows</li><li>Fill-in-the-blank recall page for every chapter</li></ul></div>
       </article>
       <article class="nc y">
-        <div class="art plan"><div class="chk"><span><i>✓</i> Cell: The Unit of Life</span><span><i>✓</i> Laws of Motion</span><span><i>✓</i> Chemical Bonding</span><span><i class="e"></i> Human Physiology</span><span><i class="e"></i> Organic Chem basics</span></div></div>
-        <div class="bd"><span class="badge">No more confusion</span><h3>Full Syllabus Plan</h3>
-          <div class="fxs"><b>Side effect:</b> "What should I study today?" leaves your vocabulary.</div>
-          <ul><li>The complete NEET syllabus, mapped and paced</li><li>Always know what comes next</li></ul></div>
+        <div class="art real"><img src="img/mat/art-qb.webp" alt="Physics Question Bank page" loading="lazy"></div>
+        <div class="bd"><span class="badge">Most used</span><h3>NEET Question Bank</h3>
+          <div class="fxs"><b>Side effect:</b> NEET questions start looking… strangely familiar.</div>
+          <ul><li>7,900 NEET-pattern MCQs, chapter by chapter, with answer keys</li><li>812 marked with the real NEET year they came in</li></ul></div>
+      </article>
+      <article class="nc k">
+        <div class="art real"><img src="img/mat/art-lbl.webp" alt="Zoology line-by-line NCERT worksheet" loading="lazy"></div>
+        <div class="bd"><span class="badge">Biology booster</span><h3>Line-by-line NCERT</h3>
+          <div class="fxs"><b>Side effect:</b> you start quoting NCERT lines at family dinners.</div>
+          <ul><li>Every NCERT Botany and Zoology line turned into a fill-in-the-blank</li><li>7,029 lines across 32 chapters. Aim: 360/360 in Biology</li></ul></div>
       </article>
       <article class="nc">
+        <div class="art real"><img src="img/mat/art-years.webp" alt="Zoology important years sheet" loading="lazy"></div>
+        <div class="bd"><span class="badge">Exam-day saver</span><h3>Years &amp; Data Sheets</h3>
+          <div class="fxs"><b>Side effect:</b> "Which year was that?" never costs you 4 marks again.</div>
+          <ul><li>Every year, date and number NEET loves to ask, on 1–2 pages</li><li>One sheet for each subject</li></ul></div>
+      </article>
+      <article class="nc y">
         <div class="art call"><div class="phone-call"><div class="ph"><img src="meenakshi.jpg" alt=""></div><b>Meenakshi Ma'am</b><small>calling…</small><div class="btns"><i style="background:#EF4444">✕</i><i style="background:#25D366">✆</i></div></div></div>
-        <div class="bd"><span class="badge">The main thing ❤️</span><h3>1:1 Guidance Calls</h3>
+        <div class="bd"><span class="badge">The main thing ❤️</span><h3>1:1 Guidance</h3>
           <div class="fxs"><b>Side effect:</b> you stop panicking alone at 11 PM.</div>
-          <ul><li>Study plan, test analysis, weak-chapter fixes</li><li>Moral support all the way to NEET day</li></ul></div>
+          <ul><li>Daily or weekly targets, test analysis, weak-chapter fixes</li><li>Moral support all the way to NEET day</li></ul></div>
       </article>
     </div>
     <button class="cf-btn cf-next" id="cfNext" aria-label="Next">→</button>
   </div>
   <div class="dots" id="dots"></div>
+
+  <!-- subject explorer -->
+  <div class="wrap" id="subjects">
+    <h3 class="mini-h rv" style="margin-top:70px">What you get in <span class="mark">each subject</span></h3>
+    <div class="stabs rv" role="tablist">
+      <button class="stab on" data-s="phy" style="--sc:#3B82F6">⚛️ Physics</button>
+      <button class="stab" data-s="chem" style="--sc:#F97316">🧪 Chemistry</button>
+      <button class="stab" data-s="bot" style="--sc:#22A35A">🌿 Botany</button>
+      <button class="stab" data-s="zoo" style="--sc:#E11D48">🫀 Zoology</button>
+    </div>
+    <div class="spanel rv" id="spanel"></div>
+  </div>
+
+  <!-- study loop -->
+  <div class="wrap">
+    <div class="loop rv">
+      <div class="loop-h"><span class="eyebrow dk">How it all fits</span><h3>Your weekly study loop</h3><p>Every week Ma'am sets your targets. The books do the rest.</p></div>
+      <div class="loop-steps">
+        <div><i>📖</i><b>Read</b><span>Story Notes</span></div>
+        <div><i>📸</i><b>See</b><span>Photo Notes</span></div>
+        <div><i>🧠</i><b>Revise</b><span>Mind Maps</span></div>
+        <div><i>📝</i><b>Practise</b><span>Question Bank</span></div>
+        <div><i>✍️</i><b>Master NCERT</b><span>Line-by-line</span></div>
+        <div class="me"><i>📞</i><b>Review</b><span>with Ma'am</span></div>
+      </div>
+    </div>
+    <div class="center rv" style="margin-top:28px"><a href="#" class="btn btn-y wa-demo" target="_blank" rel="noopener">🎁 Ask for a free demo chapter <span class="arr">→</span></a></div>
+  </div>
 </section>
+
+<!-- preview lightbox -->
+<div class="lb" id="lb" aria-hidden="true" role="dialog" aria-label="Page preview">
+  <div class="lb-card">
+    <button class="lb-x" id="lbX" aria-label="Close">✕</button>
+    <div class="lb-img"><img id="lbImg" alt=""><div class="lock">🔒 Full page unlocks when you join</div></div>
+    <div class="lb-bar"><b id="lbCap"></b>
+      <div class="lb-nav"><button id="lbPrev" aria-label="Previous page">←</button><button id="lbNext" aria-label="Next page">→</button></div>
+    </div>
+    <a class="btn btn-y wa-link" href="#" target="_blank" rel="noopener" style="width:100%">Get the full set on WhatsApp →</a>
+  </div>
+</div>
 
 <!-- ================= 10-SECOND CHECK ================= -->
 <section class="quiz" id="check">
@@ -810,8 +934,8 @@ html.theming *,html.theming *:before,html.theming *:after{transition:background-
       <div class="rail"><div class="rf" id="rf"></div><div class="rk" id="rk">🧬</div></div>
       <div class="lvl"><div class="num">1</div><div><small>LEVEL 1</small><h3>Say hi on WhatsApp</h3><p>Message 96062 53579. Students and parents can ask anything.</p></div></div>
       <div class="lvl"><div class="num">2</div><div><small>LEVEL 2</small><h3>First call with Ma'am</h3><p>She understands where you stand: class, scores, weak chapters, worries.</p></div></div>
-      <div class="lvl"><div class="num">3</div><div><small>LEVEL 3</small><h3>Join and unlock</h3><p>Join for ₹9,000/year. Notes, Mind Maps, PYQ bank and worksheets unlock.</p></div></div>
-      <div class="lvl"><div class="num">4</div><div><small>LEVEL 4</small><h3>Regular guidance</h3><p>Calls, test analysis, plan tweaks, moral support and weekly parent updates.</p></div></div>
+      <div class="lvl"><div class="num">3</div><div><small>LEVEL 3</small><h3>Join and unlock</h3><p>Pay ₹9,000 and send the screenshot on WhatsApp. You get your Google Drive link with all notes and tests.</p></div></div>
+      <div class="lvl"><div class="num">4</div><div><small>LEVEL 4</small><h3>Guided every week</h3><p>Daily or weekly targets on WhatsApp, calls, test analysis, moral support and weekly parent updates.</p></div></div>
       <div class="lvl boss"><div class="num">★</div><div><small>BOSS LEVEL</small><h3>NEET exam day</h3><p>You walk in prepared and calm, with Ma'am in your corner till the end.</p></div></div>
     </div>
   </div>
@@ -966,10 +1090,10 @@ html.theming *,html.theming *:before,html.theming *:after{transition:background-
       <div class="pr"><ul>
         <li>1:1 guidance calls with Ma'am till NEET day</li>
         <li>Moral support + study guidance whenever needed</li>
-        <li>Photo Notes with real NCERT diagrams</li>
-        <li>Mind Maps for all 4 subjects</li>
-        <li>Chapter-wise NCERT + NEET PYQ question bank</li>
-        <li>Line-by-line worksheets for Botany and Zoology</li>
+        <li>Photo Notes + Story Notes for all 4 subjects</li>
+        <li>Mind Maps (410 pages) + Years &amp; Data sheets</li>
+        <li>Question Bank: 7,900 MCQs, 812 PYQ-tagged</li>
+        <li>Line-by-line NCERT for Botany and Zoology (7,029 lines)</li>
         <li>Full syllabus plan + weekly parent updates</li>
       </ul></div>
     </div>
@@ -985,7 +1109,9 @@ html.theming *,html.theming *:before,html.theming *:after{transition:background-
       <details class="rv"><summary>How does the personal guidance work?</summary><div class="ans">You talk to Meenakshi Ma'am on calls. She makes your study plan, checks your progress, analyses your tests and helps with whatever is blocking you, whether that's a tough chapter or a tough week.</div></details>
       <details class="rv"><summary>I already go to coaching. Do I still need this?</summary><div class="ans">This is made to work alongside coaching. Coaching teaches the syllabus; NEET Guidance gives you direction, revision material and someone who tracks you personally.</div></details>
       <details class="rv"><summary>Who is this for?</summary><div class="ans">Every NEET aspirant: Class 11, Class 12 and droppers. Guidance continues until your NEET exam.</div></details>
-      <details class="rv"><summary>What study material do I get?</summary><div class="ans">Photo Notes, Mind Maps for Physics, Chemistry, Botany and Zoology, the chapter-wise NCERT + NEET PYQ question bank, line-by-line Biology worksheets and a full syllabus plan.</div></details>
+      <details class="rv"><summary>What study material do I get?</summary><div class="ans">For Physics, Chemistry, Botany and Zoology: Photo Notes (646 pages of real NCERT diagrams, explained), Story Notes, Mind Maps (410 pages), a Question Bank of 7,900 NEET-pattern MCQs (812 tagged with real NEET PYQs) and Years &amp; Data sheets. Botany and Zoology also get Line-by-line NCERT worksheets (7,029 lines). See the <a href="#subjects" style="text-decoration:underline">subject-wise list</a> above.</div></details>
+      <details class="rv"><summary>How do I get the material after joining?</summary><div class="ans">Once you pay and send the screenshot on WhatsApp, you get a Google Drive link with every book for all four subjects. Personal guidance starts on WhatsApp the same day.</div></details>
+      <details class="rv"><summary>Can I see a sample before joining?</summary><div class="ans">Yes. You can peek at real pages in the Study material section above, and you can ask for a free demo chapter on WhatsApp at <b>96062 53579</b>.</div></details>
       <details class="rv"><summary>How will my parents know my progress?</summary><div class="ans">Ma'am sends parents an update every week. Parents can also call or WhatsApp her directly anytime.</div></details>
       <details class="rv"><summary>How much does it cost?</summary><div class="ans">₹9,000 for the full year, with everything included and no hidden charges.</div></details>
       <details class="rv"><summary>How do I join?</summary><div class="ans">Book your first call above, or message <b>96062 53579</b> on WhatsApp. Ma'am will reply and take it from there.</div></details>
@@ -1048,7 +1174,7 @@ var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isI
 document.querySelectorAll('.rv').forEach(function(el,i){ el.style.transitionDelay=(i%4)*70+'ms'; io.observe(el); });
 
 /* ---------- ribbons ---------- */
-var r1=["Photo Notes","Mind Maps","NCERT + PYQ Bank","1:1 Calls","Moral Support","Weekly Parent Updates","Line-by-line Worksheets"];
+var r1=["Photo Notes","Story Notes","Mind Maps","7,900 MCQs","1:1 Guidance","Moral Support","Weekly Parent Updates","Line-by-line NCERT"];
 var r2=["Physics","Chemistry","Botany","Zoology","NCERT first","Class 11","Class 12","Droppers","Hindi + English"];
 function fill(id,arr,st){ var h=arr.map(function(t){return '<span>'+t+'</span><span class="st">'+st+'</span>';}).join(''); document.getElementById(id).innerHTML=h+h; }
 fill('rib1',r1,'✦'); fill('rib2',r2,'🧬');
@@ -1138,6 +1264,68 @@ else {
   new IntersectionObserver(function(es){ if(es[0].isIntersecting && !started){ started=true; loop(); } },{threshold:.2}).observe(stage);
 }
 
+
+/* ---------- subject explorer ---------- */
+var SUB={
+ phy:{n:'Physics',c:'#3B82F6',sub:'Class 11 + 12 · 28 NCERT chapters',img:'img/mat/bundle-phy.webp',
+  items:[['📸','Photo Notes',['188 pages','28 chapters','209+ NCERT figures'],'Every NCERT diagram explained in short points, with a recall test per chapter.'],
+         ['📖','Story Notes',['205 pages','28 chapters'],'Theory told like a story: 3-line summary, chapter map, formulas and a one-page recap.'],
+         ['🧠','Mind Maps',['105 pages','formula tables'],'Each chapter on one page, plus fill-in-the-blank recall.'],
+         ['📝','Question Bank',['2,800 MCQs','28 levels','231 PYQ-tagged'],'NEET-pattern questions, chapter by chapter, with answer keys.'],
+         ['📅','Years & Data Sheet',['1 page'],'Every year and number to remember, on one sheet.']],
+  pv:[['pv-phy_photo_2','Photo Notes · Laws of Motion'],['pv-phy_mm_2','Mind Maps · Motion in a Plane'],['pv-phy_qb_2','Question Bank · Units & Measurement'],['pv-phy_story_3','Story Notes · One-page recap'],['pv-phy_years_1','Years & Data Sheet']]},
+ chem:{n:'Chemistry',c:'#F97316',sub:'Class 11 + 12 · 19 NCERT chapters',img:'img/mat/bundle-chem.webp',
+  items:[['📸','Photo Notes',['141 pages','19 chapters','128+ NCERT figures'],'Structures, apparatus and graphs from NCERT, explained, with recall tests.'],
+         ['📖','Story Notes',['120 pages','19 chapters'],'Concepts, reactions and formulas told simply, with worked examples and recaps.'],
+         ['🧠','Mind Maps',['119 pages','reactions & formulas'],'Whole chapters on a page: reactions, trends and formulas.'],
+         ['📝','Question Bank',['1,900 MCQs','19 levels','164 PYQ-tagged'],'NEET-pattern questions with answer keys, chapter by chapter.'],
+         ['📅','Years & Data Sheet',['2 pages'],'Key years, values and data to remember.']],
+  pv:[['pv-chem_photo_2','Photo Notes · Structure of Atom'],['pv-chem_photo_3','Photo Notes · Quick recall test'],['pv-chem_mm_2','Mind Maps · Basic Concepts'],['pv-chem_qb_2','Question Bank · Significant figures'],['pv-chem_story_2','Story Notes · Laws of combination'],['pv-chem_years_1','Years & Data Sheet']]},
+ bot:{n:'Botany',c:'#22A35A',sub:'Class 11 + 12 · all NEET Botany chapters',img:'img/mat/bundle-bot.webp',
+  items:[['📸','Photo Notes',['162 pages','16 chapters','125+ NCERT figures'],'Real NCERT plant diagrams with crisp explanations and recall tests.'],
+         ['📖','Story Notes',['chapter-wise'],'Every chapter told like a story, with NCERT lines and memory tricks.'],
+         ['🧠','Mind Maps',['117 pages','22 chapters'],'Comparison tables, flows and quick recall for every chapter.'],
+         ['📝','Question Bank',['1,700 MCQs','17 levels','258 PYQ-tagged'],'NEET-pattern questions with answer keys.'],
+         ['✍️','Line-by-line NCERT',['224 pages','17 chapters','4,004 lines'],'Every NCERT line as a fill-in-the-blank. Answer every line and you have covered NCERT.'],
+         ['📅','Years & Data Sheet',['2 pages'],'Every year and number from Botany NCERT.']],
+  pv:[['pv-bot_photo_2','Photo Notes · Stem and leaf'],['pv-bot_mm_2','Mind Maps · The Living World'],['pv-bot_story_2','Story Notes · Taxonomic hierarchy'],['pv-bot_lbl_2','Line-by-line NCERT · The Living World'],['pv-bot_years_1','Years & Data Sheet']]},
+ zoo:{n:'Zoology',c:'#E11D48',sub:'Class 11 + 12 · 15 NCERT chapters',img:'img/mat/bundle-zoo.webp',
+  items:[['📸','Photo Notes',['155 pages','15 chapters','118+ NCERT figures'],'Heart, nephron, neuron and more: every NCERT figure, explained.'],
+         ['📖','Story Notes',['chapter-wise'],'Physiology and evolution told simply, chapter by chapter.'],
+         ['🧠','Mind Maps',['69 pages','15 chapters'],'Mind maps, comparison tables and step-by-step flows.'],
+         ['📝','Question Bank',['1,500 MCQs','15 levels','159 PYQ-tagged'],'NEET-pattern questions with answer keys.'],
+         ['✍️','Line-by-line NCERT',['172 pages','15 chapters','3,025 lines'],'Every NCERT Zoology line as a fill-in-the-blank.'],
+         ['📅','Years & Data Sheet',['16 key years'],'From Homo erectus in Java to the first gene therapy: every year NEET asks.']],
+  pv:[['pv-zoo_photo_2','Photo Notes · Animal Kingdom'],['pv-zoo_mm_2','Mind Maps · Animal Kingdom'],['pv-zoo_story_1','Story Notes · Animal Kingdom'],['pv-zoo_lbl_2','Line-by-line NCERT · Animal Kingdom'],['pv-zoo_years_1','Years & Data Sheet']]}
+};
+var spanel=document.getElementById('spanel'), curPv=[], curI=0;
+function showSub(k){
+  var d=SUB[k]; spanel.style.setProperty('--sc',d.c);
+  spanel.innerHTML='<div class="sp-top"><div class="sp-img"><img src="'+d.img+'" alt="'+d.n+' study material bundle" loading="lazy"></div>'+
+   '<div class="sp-list"><h4>'+d.n+' bundle<small>'+d.sub+'</small></h4>'+
+   d.items.map(function(it){return '<div class="sp-item"><i>'+it[0]+'</i><div><b>'+it[1]+'</b><div class="nums">'+it[2].map(function(x){return '<span>'+x+'</span>';}).join('')+'</div><p>'+it[3]+'</p></div></div>';}).join('')+
+   '</div></div><div class="peek"><div class="peek-h"><b>👀 Peek inside the '+d.n+' books</b><small>Tap a page to preview</small></div><div class="peek-row">'+
+   d.pv.map(function(p,i){return '<button class="pk" data-i="'+i+'"><img src="img/mat/'+p[0]+'.webp" alt="'+p[1]+'" loading="lazy"><span>'+p[1]+'</span></button>';}).join('')+'</div></div>';
+  curPv=d.pv;
+  spanel.querySelectorAll('.pk').forEach(function(b){ b.onclick=function(){ openLb(+b.dataset.i); }; });
+}
+document.querySelectorAll('.stab').forEach(function(t){ t.onclick=function(){ document.querySelectorAll('.stab').forEach(function(x){x.classList.remove('on');}); t.classList.add('on'); showSub(t.dataset.s); }; });
+showSub('phy');
+var lb=document.getElementById('lb'), lbImg=document.getElementById('lbImg'), lbCap=document.getElementById('lbCap');
+function openLb(i){ curI=(i+curPv.length)%curPv.length; lbImg.src='img/mat/'+curPv[curI][0]+'.webp'; lbImg.alt=curPv[curI][1]; lbCap.textContent=curPv[curI][1]; lb.classList.add('open'); lb.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; }
+function closeLb(){ lb.classList.remove('open'); lb.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
+document.getElementById('lbX').onclick=closeLb;
+lb.addEventListener('click',function(e){ if(e.target===lb) closeLb(); });
+document.getElementById('lbPrev').onclick=function(){ openLb(curI-1); };
+document.getElementById('lbNext').onclick=function(){ openLb(curI+1); };
+document.addEventListener('keydown',function(e){ if(!lb.classList.contains('open')) return; if(e.key==='Escape') closeLb(); if(e.key==='ArrowRight') openLb(curI+1); if(e.key==='ArrowLeft') openLb(curI-1); });
+lbImg.addEventListener('contextmenu',function(e){ e.preventDefault(); });
+document.querySelectorAll('.wa-demo').forEach(function(a){ a.href=waURL("Hi Ma'am, can I get a free demo chapter of the NEET Guidance study material? 🙏"); });
+/* count-up for library stats */
+var cio=new IntersectionObserver(function(es){ es.forEach(function(e){ if(!e.isIntersecting) return; cio.unobserve(e.target); var el=e.target, to=+el.dataset.count, t0=performance.now();
+  if(reduce){ return; } (function step(t){ var p=Math.min(1,(t-t0)/1200), v=Math.round(to*(1-Math.pow(1-p,3))); el.textContent=v.toLocaleString('en-IN'); if(p<1) requestAnimationFrame(step); })(t0); }); },{threshold:.6});
+document.querySelectorAll('[data-count]').forEach(function(el){ cio.observe(el); });
+
 /* ---------- notes coverflow ---------- */
 var cf=document.getElementById('cf'), cards=[].slice.call(cf.children), dots=document.getElementById('dots'), cur=0, paused=false, pT;
 cards.forEach(function(_,i){ var b=document.createElement('button'); b.setAttribute('aria-label','Card '+(i+1)); b.onclick=function(){go(i);hold();}; dots.appendChild(b); });
@@ -1162,9 +1350,9 @@ if(!reduce) setInterval(function(){ if(!paused && !document.hidden) go(cur+1); }
 /* ---------- 10-second check ---------- */
 var R={
   plan:{t:"You need a plan, not more hours.",p:"Ma'am builds a personal study plan around your syllabus, coaching timetable and weak chapters, then checks in so you actually follow it.",f:["Personal study plan","Full syllabus map","Regular check-in calls"]},
-  forget:{t:"You need smarter revision.",p:"Mind Maps put a whole chapter on one page, and Photo Notes make diagrams stick. You revise in minutes, not hours.",f:["Mind Maps","Photo Notes","Revision schedule"]},
-  bio:{t:"You need NCERT, line by line.",p:"The Botany and Zoology line-by-line worksheets plus the chapter-wise NCERT + PYQ bank turn NCERT into marks. 360/360 is the aim.",f:["Line-by-line worksheets","NCERT + PYQ bank","Photo Notes"]},
-  mock:{t:"You need test analysis.",p:"Ma'am goes through your mock tests with you, finds where marks are leaking, and gives you exactly what to fix next, with PYQs to practise.",f:["1:1 test analysis","PYQ practice","Weak-chapter plan"]},
+  forget:{t:"You need smarter revision.",p:"Story Notes make the theory easy to remember, Mind Maps put a whole chapter on one page, and Photo Notes make diagrams stick.",f:["Story Notes","Mind Maps","Photo Notes"]},
+  bio:{t:"You need NCERT, line by line.",p:"7,029 NCERT lines as fill-in-the-blanks, plus 3,200 Biology MCQs with 417 real PYQs, turn NCERT into marks. 360/360 is the aim.",f:["Line-by-line worksheets","NCERT + PYQ bank","Photo Notes"]},
+  mock:{t:"You need test analysis.",p:"Ma'am goes through your mock tests with you, finds where marks are leaking, and gives you exactly what to fix next, with 7,900 chapter-wise MCQs to practise.",f:["1:1 test analysis","PYQ practice","Weak-chapter plan"]},
   mood:{t:"You need someone in your corner.",p:"This is the heart of the program. Talk to Ma'am on call when it gets heavy. Moral support is part of the plan, not an extra.",f:["1:1 calls","Moral support","Weekly parent updates"]}
 };
 var qres=document.getElementById('qres');
@@ -1179,7 +1367,7 @@ document.querySelectorAll('.qo').forEach(function(b){ b.addEventListener('click'
 
 /* ---------- compare toggle ---------- */
 var ALONE=["Studying hard without knowing if it's the right stuff","Searching YouTube and random PDFs for what to read","Same weak chapters, same mistakes in every mock","Low days hit hard, and you handle them alone","Parents don't know how you're really doing"];
-var WITH=["A personal plan, reviewed with Ma'am on calls","Photo Notes, Mind Maps and PYQs, all in one place","Test analysis shows exactly what to fix next","Moral support from someone who truly gets NEET","Weekly updates keep parents calm and in the loop"];
+var WITH=["A personal plan, reviewed with Ma'am on calls","Photo Notes, Story Notes, Mind Maps and 7,900 MCQs in one Drive","Test analysis shows exactly what to fix next","Moral support from someone who truly gets NEET","Weekly updates keep parents calm and in the loop"];
 var tg=document.getElementById('tg'), cmp=document.getElementById('cmp'), list=document.getElementById('clist');
 function setMode(m){
   list.innerHTML=(m?WITH:ALONE).map(function(t){return '<li><span class="ic">'+(m?'✓':'✕')+'</span><span>'+t+'</span></li>';}).join('');
@@ -1243,7 +1431,7 @@ flip.addEventListener('click',function(){ if(!(window.matchMedia && matchMedia('
 flip.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); flip.classList.toggle('on'); } });
 
 /* ---------- toasts (program facts) ---------- */
-var T=[["📞","Parents can call Ma'am directly","before joining, ask anything"],["🧠","Mind Maps for all 4 subjects","included in the program"],["💛","Moral support is part of the plan","not an extra"],["📩","Weekly updates to parents","every single week"],["🎯","Biology worksheets aim for 360/360","line by line from NCERT"]];
+var T=[["📞","Parents can call Ma'am directly","before joining, ask anything"],["📝","7,900 NEET MCQs","812 tagged with real PYQs"],["🧠","410 pages of Mind Maps","for all 4 subjects"],["💛","Moral support is part of the plan","not an extra"],["📩","Weekly updates to parents","every single week"],["🎯","Biology worksheets aim for 360/360","line by line from NCERT"]];
 var toast=document.getElementById('toast'), ti=0, tOff=false;
 function showToast(){ if(tOff) return; var x=T[ti++%T.length]; document.getElementById('tIc').textContent=x[0]; document.getElementById('tB').textContent=x[1]; document.getElementById('tS').textContent=x[2];
   toast.classList.add('show'); setTimeout(function(){ toast.classList.remove('show'); },5200); }
