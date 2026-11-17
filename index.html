@@ -578,6 +578,14 @@ input,select{-webkit-appearance:none;appearance:none}
 [data-theme="dark"] .loop{background:#000;border-color:var(--y)}
 [data-theme="dark"] .lib-img img,[data-theme="dark"] .sp-img img{filter:drop-shadow(0 18px 24px rgba(0,0,0,.6)) brightness(.95)}
 
+/* =================== SOUND TOGGLE =================== */
+.snd-btn .off{opacity:0;transform:scale(.5)}
+.snd-btn svg{transition:transform .3s cubic-bezier(.3,1.5,.5,1),opacity .2s}
+.snd-btn.muted .on{opacity:0;transform:scale(.5)}
+.snd-btn.muted .off{opacity:1;transform:none}
+.snd-btn.ping{animation:ping2 .4s}
+@keyframes ping2{40%{transform:scale(1.12) rotate(-6deg)}}
+@media(max-width:400px){.snd-btn{display:none}}
 /* =================== THEME TOGGLE =================== */
 .theme-btn{width:44px;height:44px;flex:none;border-radius:14px;border:2px solid var(--bd);background:var(--card);color:var(--fg);box-shadow:0 3px 0 var(--shc);display:grid;place-items:center;position:relative;overflow:hidden;transition:transform .15s}
 .theme-btn:active{transform:translateY(2px);box-shadow:0 1px 0 var(--shc)}
@@ -699,6 +707,10 @@ html.theming *,html.theming *:before,html.theming *:after{transition:background-
       <a href="#parents">For parents</a>
       <a href="#faq">FAQs</a>
       <span class="nav-r">
+        <button class="theme-btn snd-btn" id="sndBtn" aria-label="Turn click sounds off" title="Click sounds on / off">
+          <svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9H4Z" fill="#F5C518"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg>
+          <svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9H4Z" fill="#ddd"/><path d="M17 9l5 6M22 9l-5 6"/></svg>
+        </button>
         <button class="theme-btn" id="themeBtn" aria-label="Switch to night mode" title="Day / Night mode">
           <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5" fill="#F5C518"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8"/></svg>
           <svg class="moon" viewBox="0 0 24 24" fill="#F5C518" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z"/></svg>
@@ -1265,6 +1277,58 @@ else {
 }
 
 
+
+/* ---------- click sounds (Web Audio, synthesised, very soft) ---------- */
+var SFX=(function(){
+  var ctx=null, master=null, on=true, last=0;
+  try{ on = localStorage.getItem('ng-sound')!=='off'; }catch(e){}
+  function ac(){ if(!ctx){ var C=window.AudioContext||window.webkitAudioContext; if(!C) return null; ctx=new C(); master=ctx.createGain(); master.gain.value=.55; master.connect(ctx.destination);} if(ctx.state==='suspended') ctx.resume(); return ctx; }
+  function tone(f,t0,dur,type,vol,glide){ var a=ac(); if(!a) return; var o=a.createOscillator(), g=a.createGain(), t=a.currentTime+t0;
+    o.type=type||'sine'; o.frequency.setValueAtTime(f,t); if(glide) o.frequency.exponentialRampToValueAtTime(glide,t+dur);
+    g.gain.setValueAtTime(0.0001,t); g.gain.exponentialRampToValueAtTime(vol||.12,t+.008); g.gain.exponentialRampToValueAtTime(0.0001,t+dur);
+    o.connect(g); g.connect(master); o.start(t); o.stop(t+dur+.02); }
+  function noise(t0,dur,vol,freq){ var a=ac(); if(!a) return; var n=Math.floor(a.sampleRate*dur), b=a.createBuffer(1,n,a.sampleRate), d=b.getChannelData(0);
+    for(var i=0;i<n;i++) d[i]=(Math.random()*2-1)*Math.pow(1-i/n,2);
+    var s=a.createBufferSource(), f=a.createBiquadFilter(), g=a.createGain(), t=a.currentTime+t0; s.buffer=b; f.type='bandpass'; f.frequency.value=freq||2400; f.Q.value=.9; g.gain.value=vol||.05;
+    s.connect(f); f.connect(g); g.connect(master); s.start(t); }
+  var P={
+    tap:   function(){ tone(1250,0,.045,'triangle',.07,900); },                       // generic button
+    pop:   function(){ tone(520,0,.09,'sine',.12,880); tone(1320,.01,.05,'triangle',.03); }, // tabs / chips
+    tick:  function(){ tone(2100,0,.02,'square',.018); noise(0,.02,.03,4200); },          // card swipe
+    whoosh:function(){ noise(0,.16,.05,1400); tone(380,0,.14,'sine',.04,620); },        // flip / lightbox
+    toggle:function(on){ tone(on?660:520,0,.07,'triangle',.09,on?990:390); },
+    open:  function(){ tone(440,0,.08,'sine',.08,660); },
+    close: function(){ tone(660,0,.07,'sine',.07,440); },
+    chime: function(){ [784,988,1319].forEach(function(f,i){ tone(f,i*.07,.38,'sine',.09); tone(f*2,i*.07,.18,'triangle',.015); }); }, // book / WhatsApp
+    success:function(){ [523,659,784,1047].forEach(function(f,i){ tone(f,i*.06,.3,'sine',.08); }); }
+  };
+  function play(n,arg){ if(!on || !P[n]) return; var now=performance.now(); if(n===last.n && now-last.t<45) return; last={n:n,t:now}; try{ P[n](arg); }catch(e){} }
+  last={n:'',t:0};
+  return { play:play, set:function(v){ on=v; try{ localStorage.setItem('ng-sound',v?'on':'off'); }catch(e){} }, get:function(){ return on; }, unlock:ac };
+})();
+(function(){
+  var sb=document.getElementById('sndBtn');
+  function paintSnd(){ var on=SFX.get(); sb.classList.toggle('muted',!on); sb.setAttribute('aria-label', on?'Turn click sounds off':'Turn click sounds on'); }
+  paintSnd();
+  sb.addEventListener('click',function(e){ e.stopPropagation(); SFX.set(!SFX.get()); paintSnd(); sb.classList.remove('ping'); void sb.offsetWidth; sb.classList.add('ping'); if(SFX.get()) SFX.play('success'); });
+  // one listener for the whole page
+  document.addEventListener('click',function(e){
+    var t=e.target.closest('a,button,summary,.flip,.pk'); if(!t || t===sb) return;
+    if(t.matches('.wa-link,.wa-demo,.wa-parent,.wa-float,[href^="tel:"]') || (t.closest('#bookForm') && t.type==='submit')) return SFX.play('chime');
+    if(t.matches('a[href="#book"],a[href="#notes"],a[href="#subjects"]')) return SFX.play('chime');
+    if(t.matches('.stab,.tab,.qo')) return SFX.play('pop');
+    if(t.matches('.toggle button')) return SFX.play('toggle', t.dataset.m==='1');
+    if(t.matches('.theme-btn')) return SFX.play('toggle', document.documentElement.getAttribute('data-theme')!=='dark');
+    if(t.matches('.pk,.flip')) return SFX.play('whoosh');
+    if(t.matches('summary')) return SFX.play(t.parentElement.open?'close':'open');
+    if(t.matches('.lb-x')) return SFX.play('close');
+    if(t.matches('.cf-btn,.dots button,.lb-nav button')) return SFX.play('tick');
+    SFX.play('tap');
+  },true);
+  // form submit by keyboard
+  document.getElementById('bookForm').addEventListener('submit',function(){ SFX.play('chime'); },true);
+})();
+
 /* ---------- subject explorer ---------- */
 var SUB={
  phy:{n:'Physics',c:'#3B82F6',sub:'Class 11 + 12 · 28 NCERT chapters',img:'img/mat/bundle-phy.webp',
@@ -1335,7 +1399,7 @@ function paint(){ var mid=cf.scrollLeft+cf.clientWidth/2, best=0, bd=1e9;
     if(Math.abs(d)<bd){bd=Math.abs(d);best=i;}
     if(!reduce) c.style.transform='perspective(1000px) rotateY('+(Math.max(-2,Math.min(2,d))*-22)+'deg) scale('+(1-a*.1)+')';
     c.style.opacity=1-a*.25; });
-  cur=best; [].forEach.call(dots.children,function(b,i){ b.classList.toggle('on',i===best); }); }
+  if(best!==cur && paused && typeof SFX!=='undefined') SFX.play('tick'); cur=best; [].forEach.call(dots.children,function(b,i){ b.classList.toggle('on',i===best); }); }
 var raf=0; cf.addEventListener('scroll',function(){ if(!raf) raf=requestAnimationFrame(function(){raf=0;paint();}); },{passive:true});
 window.addEventListener('resize',paint); window.addEventListener('orientationchange',function(){ setTimeout(function(){ go(cur); paint(); },300); });
 function hold(){ paused=true; clearTimeout(pT); pT=setTimeout(function(){paused=false;},7000); }
