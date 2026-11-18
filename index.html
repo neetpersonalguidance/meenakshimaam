@@ -422,8 +422,28 @@ section{padding:90px 0;position:relative}
 .launch .c1{width:200px;height:200px;right:-60px;top:-60px;background:radial-gradient(circle at 30% 30%,#FFE58A,#F5C518 55%,#a07a00)}
 .launch .c2{width:100px;height:100px;left:6%;bottom:10%;background:radial-gradient(circle at 30% 30%,#fff,#ddd 60%,#888)}
 .launch .c2:after,.launch .c1:after{content:"";position:absolute;width:30%;height:30%;left:35%;top:35%;border-radius:50%;background:rgba(17,17,17,.25)}
-.mini-helix{position:relative;width:260px;height:110px;margin:0 auto 18px;transition:transform 1.3s cubic-bezier(.5,0,.8,.2),opacity 1.3s}
-.launch.go .mini-helix{transform:translateY(-640px) scale(1.4) rotate(-10deg);opacity:.2}
+.steth-wrap{position:relative;height:290px;margin:-80px auto 4px;width:320px}
+.steth{position:absolute;left:50%;top:0;width:240px;height:290px;margin-left:-120px;filter:drop-shadow(0 8px 14px rgba(0,0,0,.45));transform-origin:50% 0;animation:swing 3.2s ease-in-out infinite}
+@keyframes swing{0%,100%{transform:rotate(9deg)}50%{transform:rotate(-9deg)}}
+.launch.listen .steth{animation:none;transform:rotate(0);transition:transform .5s cubic-bezier(.3,1.4,.5,1)}
+.steth .bell{transform-box:fill-box;transform-origin:center}
+.launch.listen .steth .bell{animation:thump .9s ease-in-out infinite}
+@keyframes thump{0%,100%{transform:scale(1)}12%{transform:scale(1.12)}24%{transform:scale(.98)}36%{transform:scale(1.07)}}
+.waves{position:absolute;left:50%;top:247px;width:0;height:0}
+.waves i{position:absolute;left:-30px;top:-30px;width:60px;height:60px;border-radius:50%;border:3px solid var(--y);opacity:0}
+.launch.listen .waves i{animation:ring 1.8s ease-out infinite}
+.launch.listen .waves i:nth-child(2){animation-delay:.6s}.launch.listen .waves i:nth-child(3){animation-delay:1.2s}
+@keyframes ring{0%{transform:scale(.6);opacity:.9}100%{transform:scale(3.2);opacity:0}}
+.say{position:absolute;left:calc(50% + 62px);top:196px;background:#fff;color:var(--ink);font-weight:700;font-size:14px;padding:9px 13px;border-radius:14px 14px 14px 4px;border:2px solid var(--ink);box-shadow:3px 3px 0 var(--y);white-space:nowrap;transform-origin:0 100%;animation:sayin .45s cubic-bezier(.3,1.5,.5,1) both}
+@keyframes sayin{from{transform:scale(.3);opacity:0}}
+.ecg2{display:block;width:min(420px,90%);height:46px;margin:0 auto 6px;opacity:0;transition:opacity .3s}
+.launch.listen .ecg2{opacity:1}
+.ecg2 path{fill:none;stroke:var(--y);stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:640;stroke-dashoffset:640}
+.launch.listen .ecg2 path{animation:ecgdraw 1.65s linear forwards}
+@keyframes ecgdraw{to{stroke-dashoffset:0}}
+.launch.found .say{background:var(--y)}
+.spark{position:absolute;width:10px;height:10px;border-radius:2px;pointer-events:none}
+@media(max-width:560px){.steth-wrap{width:100%;height:270px}.steth{width:210px;height:254px;margin-left:-105px}.waves{top:216px}.say{left:calc(50% + 42px);top:150px;font-size:12px;padding:7px 10px;white-space:normal;max-width:130px}}
 .launch h2{font-size:clamp(38px,6vw,74px);position:relative}
 .launch p{color:#cfcfcf;font-size:18px;margin:16px auto 32px;max-width:560px;position:relative}
 .launch .btn{position:relative;font-size:18px;padding:17px 30px}
@@ -1136,7 +1156,30 @@ html.theming *,html.theming *:before,html.theming *:after{transition:background-
   <div class="wrap">
     <div class="launch" id="launch">
       <div class="sky" id="sky"></div><span class="cell c1"></span><span class="cell c2"></span>
-      <div class="mini-helix" id="miniHelix"></div>
+      <div class="steth-wrap" aria-hidden="true">
+        <svg class="steth" viewBox="0 0 190 230">
+          <!-- ear tubes -->
+          <path d="M55 -20 C 55 30, 50 55, 72 80" fill="none" stroke="#d9d4c3" stroke-width="7" stroke-linecap="round"/>
+          <path d="M135 -20 C 135 30, 140 55, 118 80" fill="none" stroke="#d9d4c3" stroke-width="7" stroke-linecap="round"/>
+          <circle cx="55" cy="-20" r="9" fill="#F5C518" stroke="#111" stroke-width="2.5"/><circle cx="135" cy="-20" r="9" fill="#F5C518" stroke="#111" stroke-width="2.5"/>
+          <!-- Y joint -->
+          <path d="M72 80 Q95 100 118 80" fill="none" stroke="#F5C518" stroke-width="10" stroke-linecap="round"/>
+          <path d="M72 80 Q95 100 118 80" fill="none" stroke="#111" stroke-width="2.5" stroke-linecap="round" opacity=".35"/>
+          <!-- main tube -->
+          <path d="M95 92 C 95 120, 70 130, 80 152 C 88 168, 95 160, 95 172" fill="none" stroke="#F5C518" stroke-width="10" stroke-linecap="round"/>
+          <!-- chest piece -->
+          <g class="bell">
+            <rect x="88" y="166" width="14" height="12" rx="3" fill="#bbb" stroke="#111" stroke-width="2.5"/>
+            <circle cx="95" cy="196" r="24" fill="#e8e8e8" stroke="#111" stroke-width="3"/>
+            <circle cx="95" cy="196" r="16" fill="#F5C518" stroke="#111" stroke-width="2.5"/>
+            <path d="M95 205 C83 197 84 188 90 188 C93 188 95 191 95 191 C95 191 97 188 100 188 C106 188 107 197 95 205Z" fill="#EF4444"/>
+            <circle cx="86" cy="188" r="3" fill="#fff" opacity=".8"/>
+          </g>
+        </svg>
+        <div class="waves"><i></i><i></i><i></i></div>
+        <div class="say" id="say">I hear a future doctor 🩺</div>
+      </div>
+      <svg class="ecg2" viewBox="0 0 420 46" preserveAspectRatio="none" aria-hidden="true"><path id="ecg2" d="M0 26 H70 L80 26 L88 6 L98 42 L106 16 L114 26 H200 L210 26 L218 4 L228 44 L236 14 L244 26 H330 L340 26 L348 8 L358 40 L366 18 L374 26 H420"/></svg>
       <h2>Ready to start preparing<br>with Ma'am?</h2>
       <p>One message is all it takes. Let's build your NEET plan together, starting today.</p>
       <a class="btn btn-y wa-link" id="go" href="#" target="_blank" rel="noopener">Start my NEET journey <span class="arr">→</span></a>
@@ -1220,15 +1263,13 @@ Helix.prototype.frame=function(dt){
 };
 var stage=document.getElementById('dna');
 var hx=new Helix(document.getElementById('helix'),14,62);
-var mini=new Helix(document.getElementById('miniHelix'),10,40);
-mini.rungs.forEach(function(r){ r.el.classList.add('on'); });
 var last=performance.now();
 function tick(now){
   var dt=Math.min(50,now-last); last=now;
-  if(!reduce){ hx.frame(dt); mini.frame(dt); }
+  if(!reduce){ hx.frame(dt); }
   requestAnimationFrame(tick);
 }
-hx.frame(0); mini.frame(0); requestAnimationFrame(tick);
+hx.frame(0); requestAnimationFrame(tick);
 
 /* ---------- hero story loop ---------- */
 var chips=[].slice.call(stage.querySelectorAll('.chip'));
@@ -1300,6 +1341,7 @@ var SFX=(function(){
     open:  function(){ tone(440,0,.08,'sine',.08,660); },
     close: function(){ tone(660,0,.07,'sine',.07,440); },
     chime: function(){ [784,988,1319].forEach(function(f,i){ tone(f,i*.07,.38,'sine',.09); tone(f*2,i*.07,.18,'triangle',.015); }); }, // book / WhatsApp
+    lubdub:function(){ tone(70,0,.12,'sine',.35,48); tone(62,.17,.1,'sine',.25,44); },
     success:function(){ [523,659,784,1047].forEach(function(f,i){ tone(f,i*.06,.3,'sine',.08); }); }
   };
   function play(n,arg){ if(!on || !P[n]) return; var now=performance.now(); if(n===last.n && now-last.t<45) return; last={n:n,t:now}; try{ P[n](arg); }catch(e){} }
@@ -1525,13 +1567,18 @@ if(!reduce){ setTimeout(showToast,6000); setInterval(showToast,16000); }
 var sky=document.getElementById('sky');
 for(var k=0;k<44;k++){ var s=document.createElement('i'); s.style.left=Math.random()*100+'%'; s.style.top=Math.random()*100+'%'; s.style.animationDelay=(-Math.random()*3)+'s'; sky.appendChild(s); }
 var goBtn=document.getElementById('go'), launch=document.getElementById('launch'), count=document.getElementById('count');
+var say=document.getElementById('say'), LINES=["I hear a future doctor 🩺","Lub-dub… that's your NEET heartbeat 💛","Sounds like a strong 650+ to me","Steady pulse. Steady prep. 👌"], li=0, busy=false;
+if(!reduce) setInterval(function(){ if(busy||document.hidden) return; li=(li+1)%LINES.length; say.textContent=LINES[li]; say.style.animation='none'; void say.offsetWidth; say.style.animation=''; },3200);
+function sparks(){ var r=launch.getBoundingClientRect(), b=say.getBoundingClientRect(); for(var i=0;i<22;i++){ var d=document.createElement('i'); d.className='spark'; d.style.left=(r.width/2)+'px'; d.style.top='190px'; d.style.background=['#F5C518','#fff','#EF4444','#25D366'][i%4]; launch.appendChild(d);
+  var a=Math.random()*Math.PI*2, v=90+Math.random()*120; d.animate([{transform:'translate(0,0) rotate(0)',opacity:1},{transform:'translate('+Math.cos(a)*v+'px,'+(Math.sin(a)*v-40)+'px) rotate('+(Math.random()*540)+'deg)',opacity:0}],{duration:900+Math.random()*400,easing:'cubic-bezier(.2,.7,.3,1)',fill:'forwards'}).finished.then(function(x){return function(){x.remove();};}(d)); } }
 goBtn.addEventListener('click',function(e){
-  if(reduce) return;
-  e.preventDefault(); var href=goBtn.href, n=3, win=null;
-  count.textContent='Unzipping in 3…'; mini.speed=3;
-  var iv=setInterval(function(){ n--; if(n>0){ count.textContent='Unzipping in '+n+'…'; mini.speed+=2; }
-    else { clearInterval(iv); count.textContent="Let's go! 🎉"; launch.classList.add('go'); mini.speed=10;
-      setTimeout(function(){ location.href=href; setTimeout(function(){ launch.classList.remove('go'); mini.speed=1; count.textContent=''; },1500); },1000); } },550);
+  if(reduce || busy) return;
+  e.preventDefault(); busy=true; var href=goBtn.href, n=3;
+  launch.classList.add('listen'); say.textContent='Listening… 🎧'; count.textContent='Checking your NEET heartbeat… 3';
+  if(typeof SFX!=='undefined') SFX.play('lubdub');
+  var iv=setInterval(function(){ n--; if(n>0){ count.textContent='Checking your NEET heartbeat… '+n; if(typeof SFX!=='undefined') SFX.play('lubdub'); }
+    else { clearInterval(iv); launch.classList.add('found'); say.textContent='Future doctor detected! 🎉'; count.textContent="Strong heartbeat. Let's begin! 💛"; sparks(); if(typeof SFX!=='undefined') SFX.play('success');
+      setTimeout(function(){ location.href=href; setTimeout(function(){ launch.classList.remove('listen','found'); count.textContent=''; busy=false; },1500); },1100); } },600);
 });
 })();
 </script>
