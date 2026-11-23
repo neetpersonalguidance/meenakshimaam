@@ -581,8 +581,12 @@ input,select{-webkit-appearance:none;appearance:none}
 .loop-steps .me{background:var(--y);border-color:var(--y)}.loop-steps .me b,.loop-steps .me span{color:var(--ink)}
 @media(max-width:980px){.loop{grid-template-columns:1fr}.loop-steps{grid-template-columns:repeat(3,1fr)}.loop-steps div:nth-child(3):after{display:none}}
 
-.lb{position:fixed;inset:0;z-index:200;background:rgba(10,10,8,.78);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:16px}
-.lb.open{display:flex;animation:popin .3s ease}
+.lb{position:fixed;inset:0;z-index:200;background:rgba(10,10,8,.86);display:flex;align-items:center;justify-content:center;padding:16px;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .18s ease,visibility 0s .18s}
+.lb.open{opacity:1;visibility:visible;pointer-events:auto;transition:opacity .18s ease}
+.lb .lb-card{transform:translateY(14px) scale(.97);transition:transform .22s cubic-bezier(.2,1,.3,1);will-change:transform}
+.lb.open .lb-card{transform:none}
+.lb-img img{transition:filter .25s}
+.lb-img img.soft{filter:blur(2px)}
 .lb-card{background:var(--card);border:2.5px solid var(--bd);border-radius:24px;padding:14px;width:min(460px,100%);max-height:calc(100vh - 32px);overflow:auto;position:relative;box-shadow:8px 8px 0 var(--y)}
 .lb-x{position:absolute;right:10px;top:10px;z-index:3;width:38px;height:38px;border-radius:50%;border:2px solid var(--ink);background:#fff;font-weight:800}
 .lb-img{position:relative;border-radius:14px;overflow:hidden;border:2px solid var(--bd);background:#fff}
@@ -1084,11 +1088,11 @@ html.theming *,html.theming *:before,html.theming *:after{transition:background-
     </div>
 
     <div class="tabpane on" id="t1"><div class="shots">
-      <button class="shot" data-src="img/rev/score-624.webp" data-cap="NEET score 624/720, subject-wise"><img src="img/rev/score-624.webp" alt="WhatsApp chat: Phy 127, Chem 152, Bot 175, Zoo 170, Total 624" loading="lazy"><span>624/720 · subject-wise</span></button>
-      <button class="shot" data-src="img/rev/rank-45k.webp" data-cap="Result day: 45k rank"><img src="img/rev/rank-45k.webp" alt="WhatsApp chat: Ma'am results aagaya 45k rank aaya hai" loading="lazy"><span>"45k rank aaya hai"</span></button>
-      <button class="shot" data-src="img/rev/admission.webp" data-cap="Admission secured"><img src="img/rev/admission.webp" alt="WhatsApp chat: I got admission today" loading="lazy"><span>Admission secured 🎓</span></button>
-      <button class="shot" data-src="img/rev/score-pdf.webp" data-cap="Score card shared with Ma'am"><img src="img/rev/score-pdf.webp" alt="WhatsApp chat: You are one of the reason for this score of mine" loading="lazy"><span>"One of the reasons for this score"</span></button>
-      <button class="shot" data-src="img/rev/score-482.webp" data-cap="Subject-wise score: B-156, Z-136"><img src="img/rev/score-482.webp" alt="WhatsApp chat: P-74, C-116, B-156, Z-136" loading="lazy"><span>Biology 292/360</span></button>
+      <button class="shot" data-src="img/rev/score-624.webp" data-cap="NEET score 624/720, subject-wise"><img decoding="async" src="img/rev/score-624-t.webp" alt="WhatsApp chat: Phy 127, Chem 152, Bot 175, Zoo 170, Total 624" loading="lazy"><span>624/720 · subject-wise</span></button>
+      <button class="shot" data-src="img/rev/rank-45k.webp" data-cap="Result day: 45k rank"><img decoding="async" src="img/rev/rank-45k-t.webp" alt="WhatsApp chat: Ma'am results aagaya 45k rank aaya hai" loading="lazy"><span>"45k rank aaya hai"</span></button>
+      <button class="shot" data-src="img/rev/admission.webp" data-cap="Admission secured"><img decoding="async" src="img/rev/admission-t.webp" alt="WhatsApp chat: I got admission today" loading="lazy"><span>Admission secured 🎓</span></button>
+      <button class="shot" data-src="img/rev/score-pdf.webp" data-cap="Score card shared with Ma'am"><img decoding="async" src="img/rev/score-pdf-t.webp" alt="WhatsApp chat: You are one of the reason for this score of mine" loading="lazy"><span>"One of the reasons for this score"</span></button>
+      <button class="shot" data-src="img/rev/score-482.webp" data-cap="Subject-wise score: B-156, Z-136"><img decoding="async" src="img/rev/score-482-t.webp" alt="WhatsApp chat: P-74, C-116, B-156, Z-136" loading="lazy"><span>Biology 292/360</span></button>
     </div></div>
 
     <div class="tabpane" id="t2"><div class="quotes" style="text-align:left">
@@ -1101,19 +1105,19 @@ html.theming *,html.theming *:before,html.theming *:after{transition:background-
     </div></div>
 
     <div class="tabpane" id="t3"><div class="shots masonry">
-      <button class="shot" data-src="img/rev/long-letter.webp" data-cap="“You are my inspiration”"><img src="img/rev/long-letter.webp" alt="Long thank-you message from a student" loading="lazy"></button>
-      <button class="shot" data-src="img/rev/birthday.webp" data-cap="Birthday wish"><img src="img/rev/birthday.webp" alt="Birthday message from a student" loading="lazy"></button>
-      <button class="shot" data-src="img/rev/amazing-teacher.webp" data-cap="“One of the most amazing teachers”"><img src="img/rev/amazing-teacher.webp" alt="Message: one of the most amazing teachers" loading="lazy"></button>
-      <button class="shot" data-src="img/rev/enjoyed-classes.webp" data-cap="“I've enjoyed all your classes”"><img src="img/rev/enjoyed-classes.webp" alt="Message: enjoyed all your classes" loading="lazy"></button>
-      <button class="shot" data-src="img/rev/score-pdf.webp" data-cap="After the result"><img src="img/rev/score-pdf.webp" alt="Message after NEET result" loading="lazy"></button>
-      <button class="shot" data-src="img/rev/admission.webp" data-cap="Admission day"><img src="img/rev/admission.webp" alt="Admission message" loading="lazy"></button>
+      <button class="shot" data-src="img/rev/long-letter.webp" data-cap="“You are my inspiration”"><img decoding="async" src="img/rev/long-letter-t.webp" alt="Long thank-you message from a student" loading="lazy"></button>
+      <button class="shot" data-src="img/rev/birthday.webp" data-cap="Birthday wish"><img decoding="async" src="img/rev/birthday-t.webp" alt="Birthday message from a student" loading="lazy"></button>
+      <button class="shot" data-src="img/rev/amazing-teacher.webp" data-cap="“One of the most amazing teachers”"><img decoding="async" src="img/rev/amazing-teacher-t.webp" alt="Message: one of the most amazing teachers" loading="lazy"></button>
+      <button class="shot" data-src="img/rev/enjoyed-classes.webp" data-cap="“I've enjoyed all your classes”"><img decoding="async" src="img/rev/enjoyed-classes-t.webp" alt="Message: enjoyed all your classes" loading="lazy"></button>
+      <button class="shot" data-src="img/rev/score-pdf.webp" data-cap="After the result"><img decoding="async" src="img/rev/score-pdf-t.webp" alt="Message after NEET result" loading="lazy"></button>
+      <button class="shot" data-src="img/rev/admission.webp" data-cap="Admission day"><img decoding="async" src="img/rev/admission-t.webp" alt="Admission message" loading="lazy"></button>
     </div></div>
 
     <div class="tabpane" id="t4"><div class="shots">
-      <button class="shot" data-src="img/rev/tday-studies-life.webp" data-cap="“Great teacher… in studies n life”"><img src="img/rev/tday-studies-life.webp" alt="Teacher's Day message" loading="lazy"><span>"Studies n life"</span></button>
-      <button class="shot" data-src="img/rev/tday-support-love.webp" data-cap="“Support, guidance and love”"><img src="img/rev/tday-support-love.webp" alt="Teacher's Day message" loading="lazy"><span>"Support, guidance and love"</span></button>
-      <button class="shot" data-src="img/rev/tday-coolest.webp" data-cap="“Coolest and supportive teacher”"><img src="img/rev/tday-coolest.webp" alt="Teacher's Day message" loading="lazy"><span>"Coolest and supportive"</span></button>
-      <button class="shot" data-src="img/rev/tday-morning.webp" data-cap="Good morning, Teacher's Day"><img src="img/rev/tday-morning.webp" alt="Teacher's Day message" loading="lazy"><span>"Happy teachers day mam 💐"</span></button>
+      <button class="shot" data-src="img/rev/tday-studies-life.webp" data-cap="“Great teacher… in studies n life”"><img decoding="async" src="img/rev/tday-studies-life-t.webp" alt="Teacher's Day message" loading="lazy"><span>"Studies n life"</span></button>
+      <button class="shot" data-src="img/rev/tday-support-love.webp" data-cap="“Support, guidance and love”"><img decoding="async" src="img/rev/tday-support-love-t.webp" alt="Teacher's Day message" loading="lazy"><span>"Support, guidance and love"</span></button>
+      <button class="shot" data-src="img/rev/tday-coolest.webp" data-cap="“Coolest and supportive teacher”"><img decoding="async" src="img/rev/tday-coolest-t.webp" alt="Teacher's Day message" loading="lazy"><span>"Coolest and supportive"</span></button>
+      <button class="shot" data-src="img/rev/tday-morning.webp" data-cap="Good morning, Teacher's Day"><img decoding="async" src="img/rev/tday-morning-t.webp" alt="Teacher's Day message" loading="lazy"><span>"Happy teachers day mam 💐"</span></button>
     </div></div>
 
     <div class="next-story rv"><b>Your story could be next.</b><a href="#book" class="btn btn-y">Book my first call →</a></div>
@@ -1480,7 +1484,7 @@ function showSub(k){
 document.querySelectorAll('.stab').forEach(function(t){ t.onclick=function(){ document.querySelectorAll('.stab').forEach(function(x){x.classList.remove('on');}); t.classList.add('on'); showSub(t.dataset.s); }; });
 showSub('phy');
 var lb=document.getElementById('lb'), lbImg=document.getElementById('lbImg'), lbCap=document.getElementById('lbCap');
-function openLb(i){ lb.classList.remove('shotmode'); document.getElementById('lbCta').textContent='Get the full set on WhatsApp →'; curI=(i+curPv.length)%curPv.length; lbImg.src='img/mat/'+curPv[curI][0]+'.webp'; lbImg.alt=curPv[curI][1]; lbCap.textContent=curPv[curI][1]; lb.classList.add('open'); lb.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; }
+function openLb(i){ lbImg.classList.remove('soft'); lb.classList.remove('shotmode'); document.getElementById('lbCta').textContent='Get the full set on WhatsApp →'; curI=(i+curPv.length)%curPv.length; lbImg.src='img/mat/'+curPv[curI][0]+'.webp'; lbImg.alt=curPv[curI][1]; lbCap.textContent=curPv[curI][1]; lb.classList.add('open'); lb.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; }
 function closeLb(){ lb.classList.remove('open','shotmode'); lb.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
 document.getElementById('lbX').onclick=closeLb;
 lb.addEventListener('click',function(e){ if(e.target===lb) closeLb(); });
@@ -1491,8 +1495,13 @@ lbImg.addEventListener('contextmenu',function(e){ e.preventDefault(); });
 document.querySelectorAll('.wa-demo').forEach(function(a){ a.href=waURL("Hi Ma'am, can I get a free demo chapter of the NEET Guidance study material? 🙏"); });
 
 /* ---------- review screenshots -> lightbox ---------- */
-function openShot(src,cap){ curPv=[[src.replace('img/mat/','').replace('.webp',''),cap]]; lbImg.src=src; lbImg.alt=cap; lbCap.textContent=cap; lb.classList.add('open','shotmode'); document.getElementById('lbCta').textContent='Start your story on WhatsApp →'; lb.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; }
-document.querySelectorAll('.shot,.see').forEach(function(b){ b.addEventListener('click',function(){ openShot(b.dataset.src,b.dataset.cap); }); });
+var fullCache={}; function preload(src){ if(fullCache[src]) return fullCache[src]; var i=new Image(); i.decoding='async'; i.src=src; fullCache[src]=i.decode?i.decode().catch(function(){}):Promise.resolve(); return fullCache[src]; }
+function openShot(src,cap){ curPv=[[src,cap]]; var thumb=src.replace('.webp','-t.webp'); lbImg.src=thumb; lbImg.classList.add('soft'); preload(src).then(function(){ if(curPv[0][0]===src){ lbImg.src=src; lbImg.classList.remove('soft'); } }); lbImg.alt=cap; lbCap.textContent=cap; lb.classList.add('open','shotmode'); document.getElementById('lbCta').textContent='Start your story on WhatsApp →'; lb.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; }
+document.querySelectorAll('.shot,.see').forEach(function(b){ b.addEventListener('click',function(){ openShot(b.dataset.src,b.dataset.cap); });
+  ['pointerenter','touchstart','focus'].forEach(function(ev){ b.addEventListener(ev,function(){ preload(b.dataset.src); },{passive:true}); }); });
+var revIO=new IntersectionObserver(function(es){ if(!es[0].isIntersecting) return; revIO.disconnect(); var q=[].map.call(document.querySelectorAll('#reviews [data-src]'),function(b){return b.dataset.src;}).filter(function(v,i,a){return a.indexOf(v)===i;});
+  (function next(){ if(!q.length) return; var src=q.shift(); (window.requestIdleCallback||setTimeout)(function(){ preload(src).then(next); }); })(); },{rootMargin:'300px'});
+revIO.observe(document.getElementById('reviews'));
 
 /* count-up for library stats */
 var cio=new IntersectionObserver(function(es){ es.forEach(function(e){ if(!e.isIntersecting) return; cio.unobserve(e.target); var el=e.target, to=+el.dataset.count, t0=performance.now();
