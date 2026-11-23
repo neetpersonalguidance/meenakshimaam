@@ -614,7 +614,7 @@ input,select{-webkit-appearance:none;appearance:none}
 @media(max-width:400px){.snd-btn{display:none}}
 
 /* =================== REVIEWS (real) =================== */
-.res-strip{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:14px;margin-top:34px;text-align:left}
+.res-strip{display:grid;grid-template-columns:1.15fr 1.25fr 1fr 1fr;gap:14px;margin-top:34px;text-align:left}
 .rs{border:2px solid var(--bd);border-radius:22px;padding:18px 18px 16px;background:var(--card);box-shadow:var(--sh)}
 .rs small{font-size:11px;font-weight:800;letter-spacing:.1em;color:var(--mute)}
 .rs b{display:block;font-family:"Bricolage Grotesque";font-size:36px;line-height:1.05;margin:6px 0}
@@ -622,6 +622,12 @@ input,select{-webkit-appearance:none;appearance:none}
 .rs>span{font-size:13.5px;color:var(--mute);font-style:italic}
 .rs.big{background:var(--y);border-color:var(--ink);color:var(--ink)}
 .rs.big small{color:#5a4a00}
+.rs.top{display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+.rs.top b{font-size:58px}
+.rs.top:after{content:"🏆";position:absolute;right:-6px;bottom:-14px;font-size:84px;opacity:.18;transform:rotate(-12deg)}
+.rs.top .tag{font-style:normal;font-weight:700;font-size:13px;color:var(--ink)}
+.rs .bars i{background:var(--fg)}
+.rs.l .bars i,.rs.big .bars i{background:var(--ink)}
 .rs.k{background:var(--ink);color:#fff;border-color:var(--ink)}.rs.k b{color:var(--y)}.rs.k small,.rs.k>span{color:#bbb}
 .rs.l{background:var(--soft)}
 .bars{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:8px;height:70px;align-items:end}
@@ -1073,10 +1079,10 @@ html.theming *,html.theming *:before,html.theming *:after{transition:background-
     <p class="sub rv">Messages from NEET students Ma'am has guided, shared exactly as they were sent. Names are hidden for privacy.</p>
 
     <div class="res-strip rv">
-      <div class="rs big"><small>NEET SCORE</small><b>624<span>/720</span></b>
-        <div class="bars"><i style="--v:.71" data-l="Phy 127"></i><i style="--v:.84" data-l="Chem 152"></i><i style="--v:.97" data-l="Bot 175"></i><i style="--v:.94" data-l="Zoo 170"></i></div></div>
-      <div class="rs k"><small>TOP NEET SCORE</small><b>680<span>/720</span></b><span>Scored by one of Ma'am's students</span></div>
-      <div class="rs"><small>ADMISSION</small><b>✓ Secured</b><span>"I got admission today… Class will commence from wednesday"</span></div>
+      <div class="rs big top"><small>TOP NEET SCORE</small><b>680<span>/720</span></b><span class="tag">🏆 Scored by one of Ma'am's students</span></div>
+      <div class="rs"><small>NEET SCORE</small><b>624<span>/720</span></b>
+        <div class="bars"><i style="--v:.71" data-l="P 127"></i><i style="--v:.84" data-l="C 152"></i><i style="--v:.97" data-l="B 175"></i><i style="--v:.94" data-l="Z 170"></i></div></div>
+      <div class="rs k"><small>ADMISSION</small><b>✓ Secured</b><span>"I got admission today… Class will commence from wednesday"</span></div>
       <div class="rs l"><small>BIOLOGY</small><b>156 + 136</b><span>Botany + Zoology, another student's subject-wise score</span></div>
     </div>
 
