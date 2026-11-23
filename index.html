@@ -802,7 +802,7 @@ html.theming *,html.theming *:before,html.theming *:after{transition:background-
       </div>
       <div class="proof">
         <span class="av"><img src="meenakshi.jpg" alt="Meenakshi Ma'am"></span>
-        <div><b>Meenakshi Ma'am · NEET mentor</b><small>Students' results: 624/720 · 45k AIR · admission secured</small></div>
+        <div><b>Meenakshi Ma'am · NEET mentor</b><small>Students' results: 680/720 · 624/720 · admission secured</small></div>
       </div>
     </div>
 
@@ -1075,7 +1075,7 @@ html.theming *,html.theming *:before,html.theming *:after{transition:background-
     <div class="res-strip rv">
       <div class="rs big"><small>NEET SCORE</small><b>624<span>/720</span></b>
         <div class="bars"><i style="--v:.71" data-l="Phy 127"></i><i style="--v:.84" data-l="Chem 152"></i><i style="--v:.97" data-l="Bot 175"></i><i style="--v:.94" data-l="Zoo 170"></i></div></div>
-      <div class="rs k"><small>ALL INDIA RANK</small><b>45k</b><span>"Thank you for always supporting"</span></div>
+      <div class="rs k"><small>TOP NEET SCORE</small><b>680<span>/720</span></b><span>Scored by one of Ma'am's students</span></div>
       <div class="rs"><small>ADMISSION</small><b>✓ Secured</b><span>"I got admission today… Class will commence from wednesday"</span></div>
       <div class="rs l"><small>BIOLOGY</small><b>156 + 136</b><span>Botany + Zoology, another student's subject-wise score</span></div>
     </div>
@@ -1089,7 +1089,6 @@ html.theming *,html.theming *:before,html.theming *:after{transition:background-
 
     <div class="tabpane on" id="t1"><div class="shots">
       <button class="shot" data-src="img/rev/score-624.webp" data-cap="NEET score 624/720, subject-wise"><img decoding="async" src="img/rev/score-624-t.webp" alt="WhatsApp chat: Phy 127, Chem 152, Bot 175, Zoo 170, Total 624" loading="lazy"><span>624/720 · subject-wise</span></button>
-      <button class="shot" data-src="img/rev/rank-45k.webp" data-cap="Result day: 45k rank"><img decoding="async" src="img/rev/rank-45k-t.webp" alt="WhatsApp chat: Ma'am results aagaya 45k rank aaya hai" loading="lazy"><span>"45k rank aaya hai"</span></button>
       <button class="shot" data-src="img/rev/admission.webp" data-cap="Admission secured"><img decoding="async" src="img/rev/admission-t.webp" alt="WhatsApp chat: I got admission today" loading="lazy"><span>Admission secured 🎓</span></button>
       <button class="shot" data-src="img/rev/score-pdf.webp" data-cap="Score card shared with Ma'am"><img decoding="async" src="img/rev/score-pdf-t.webp" alt="WhatsApp chat: You are one of the reason for this score of mine" loading="lazy"><span>"One of the reasons for this score"</span></button>
       <button class="shot" data-src="img/rev/score-482.webp" data-cap="Subject-wise score: B-156, Z-136"><img decoding="async" src="img/rev/score-482-t.webp" alt="WhatsApp chat: P-74, C-116, B-156, Z-136" loading="lazy"><span>Biology 292/360</span></button>
@@ -1631,7 +1630,7 @@ flip.addEventListener('click',function(){ if(!(window.matchMedia && matchMedia('
 flip.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); flip.classList.toggle('on'); } });
 
 /* ---------- toasts (program facts) ---------- */
-var T=[["🏆","A student scored 624/720","Bot 175 · Zoo 170 · Chem 152"],["📞","Parents can call Ma'am directly","before joining, ask anything"],["📝","7,900 NEET MCQs","812 tagged with real PYQs"],["🧠","410 pages of Mind Maps","for all 4 subjects"],["💛","Moral support is part of the plan","not an extra"],["📩","Weekly updates to parents","every single week"],["🎯","Biology worksheets aim for 360/360","line by line from NCERT"]];
+var T=[["🏆","A student scored 680/720","guided by Meenakshi Ma'am"],["🎯","Another scored 624/720","Bot 175 · Zoo 170 · Chem 152"],["📞","Parents can call Ma'am directly","before joining, ask anything"],["📝","7,900 NEET MCQs","812 tagged with real PYQs"],["🧠","410 pages of Mind Maps","for all 4 subjects"],["💛","Moral support is part of the plan","not an extra"],["📩","Weekly updates to parents","every single week"],["🎯","Biology worksheets aim for 360/360","line by line from NCERT"]];
 var toast=document.getElementById('toast'), ti=0, tOff=false;
 function showToast(){ if(tOff) return; var x=T[ti++%T.length]; document.getElementById('tIc').textContent=x[0]; document.getElementById('tB').textContent=x[1]; document.getElementById('tS').textContent=x[2];
   toast.classList.add('show'); setTimeout(function(){ toast.classList.remove('show'); },5200); }
